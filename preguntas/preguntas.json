@@ -1,0 +1,338 @@
+[
+  {
+    "id": "D1-001",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "Una empresa coloca en la entrada de su centro de datos un cartel visible que dice «Instalación vigilada 24 h. Los intrusos serán denunciados». ¿Qué tipo de control es?",
+    "opciones": [
+      "Preventivo (preventive)",
+      "Correctivo (corrective)",
+      "Disuasorio (deterrent)",
+      "Compensatorio (compensating)"
+    ],
+    "correcta": 2,
+    "explicacion": "Es disuasorio: desanima al intruso pero no le impide físicamente entrar. No es preventivo (eso sería una cerradura o torniquete), ni correctivo (actúa tras el incidente), ni compensatorio (sustituye a otro control inviable)."
+  },
+  {
+    "id": "D1-002",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "Un hospital no puede parchear un equipo de resonancia magnética porque el fabricante perdería la certificación. El equipo de seguridad lo coloca en una VLAN aislada con reglas de firewall estrictas. ¿Qué tipo de control describe mejor esta medida?",
+    "opciones": [
+      "Directivo (directive)",
+      "Compensatorio (compensating)",
+      "Detectivo (detective)",
+      "Disuasorio (deterrent)"
+    ],
+    "correcta": 1,
+    "explicacion": "Es compensatorio porque sustituye al control principal (parcheo) que no se puede aplicar. No es directivo (no da instrucciones), ni detectivo (no identifica incidentes), ni disuasorio (no busca desanimar)."
+  },
+  {
+    "id": "D1-003",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "Tras un ataque de ransomware, el equipo de TI restaura los servidores a partir de las copias de seguridad de la noche anterior. ¿Qué tipo de control se ha utilizado?",
+    "opciones": [
+      "Preventivo (preventive)",
+      "Correctivo (corrective)",
+      "Detectivo (detective)",
+      "Disuasorio (deterrent)"
+    ],
+    "correcta": 1,
+    "explicacion": "Restaurar backups reduce el impacto y devuelve el sistema a su estado normal tras el incidente: control correctivo. No evitó el ataque (preventivo), no lo detectó (detectivo) ni desanimó al atacante (disuasorio)."
+  },
+  {
+    "id": "D1-004",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "La dirección aprueba una evaluación anual de riesgos y una política de clasificación de datos. ¿A qué categoría de control pertenecen?",
+    "opciones": [
+      "Gerencial (managerial)",
+      "Técnico (technical)",
+      "Operacional (operational)",
+      "Físico (physical)"
+    ],
+    "correcta": 0,
+    "explicacion": "Las evaluaciones de riesgo y las políticas las define la gestión: categoría gerencial. Técnico serían firewalls o cifrado; operacional, tareas ejecutadas por personas como la formación o los guardias; físico, cerraduras o vallas."
+  },
+  {
+    "id": "D1-005",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "Un vigilante de seguridad comprueba la identificación de cada visitante en la recepción. ¿A qué categoría de control corresponde principalmente?",
+    "opciones": [
+      "Operacional (operational)",
+      "Gerencial (managerial)",
+      "Técnico (technical)",
+      "Directivo (directive)"
+    ],
+    "correcta": 0,
+    "explicacion": "Los guardias son un control operacional: lo ejecutan personas en el día a día. Gerencial se refiere a políticas y evaluación de riesgos; técnico a sistemas; directivo es un tipo (no una categoría) que indica lo que se debe hacer."
+  },
+  {
+    "id": "D1-006",
+    "dominio": 1,
+    "objetivo": "1.1",
+    "enunciado": "Un sistema de detección de intrusiones (IDS) genera una alerta cuando detecta un escaneo de puertos, pero no lo bloquea. ¿Qué tipo de control es?",
+    "opciones": [
+      "Preventivo (preventive)",
+      "Correctivo (corrective)",
+      "Compensatorio (compensating)",
+      "Detectivo (detective)"
+    ],
+    "correcta": 3,
+    "explicacion": "El IDS identifica y avisa: control detectivo. Si bloqueara (IPS) sería preventivo. No corrige daños ni sustituye a otro control."
+  },
+  {
+    "id": "D1-007",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Un administrador quiere garantizar que un archivo descargado no haya sido modificado durante la transferencia. ¿Qué principio de la tríada CIA está protegiendo?",
+    "opciones": [
+      "Confidencialidad (confidentiality)",
+      "Disponibilidad (availability)",
+      "No repudio (non-repudiation)",
+      "Integridad (integrity)"
+    ],
+    "correcta": 3,
+    "explicacion": "Verificar que los datos no se alteraron es integridad (se hace con hashes). La confidencialidad evita que otros lean los datos; la disponibilidad garantiza el acceso; el no repudio no forma parte de la tríada y se refiere a no poder negar la autoría."
+  },
+  {
+    "id": "D1-008",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Un directivo afirma que nunca envió un correo que autorizaba un pago. La empresa demuestra lo contrario porque el correo estaba firmado digitalmente con su clave privada. ¿Qué concepto se aplica?",
+    "opciones": [
+      "Confidencialidad (confidentiality)",
+      "Disponibilidad (availability)",
+      "No repudio (non-repudiation)",
+      "Contabilidad (accounting)"
+    ],
+    "correcta": 2,
+    "explicacion": "La firma con la clave privada del emisor impide negar la autoría: no repudio. La confidencialidad protege el contenido de terceros; la disponibilidad el acceso; la contabilidad registra acciones pero no prueba criptográficamente la autoría."
+  },
+  {
+    "id": "D1-009",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "En una arquitectura de confianza cero (Zero Trust), ¿qué componente toma la decisión de conceder o denegar el acceso a un recurso?",
+    "opciones": [
+      "Punto de aplicación de políticas (PEP)",
+      "Motor de políticas (Policy Engine)",
+      "Zona implícitamente confiable (implicit trust zone)",
+      "Sujeto (subject)"
+    ],
+    "correcta": 1,
+    "explicacion": "El Policy Engine evalúa y decide. El PEP solo aplica la decisión en el plano de datos; la zona de confianza implícita es el área tras el PEP; el sujeto es quien solicita acceso."
+  },
+  {
+    "id": "D1-010",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Un analista coloca en un servidor de archivos un documento llamado «Nóminas_directivos_2026.xlsx» que nadie debería abrir, configurado para enviar una alerta al SOC si alguien accede a él. ¿Qué técnica se está usando?",
+    "opciones": [
+      "Honeynet",
+      "Honeyfile",
+      "Bastión (jump server)",
+      "Tokenización (tokenization)"
+    ],
+    "correcta": 1,
+    "explicacion": "Un archivo señuelo que alerta al ser abierto es un honeyfile. Una honeynet es una red de honeypots; un jump server es un servidor de administración; la tokenización sustituye datos sensibles por tokens."
+  },
+  {
+    "id": "D1-011",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Una organización compara sus controles actuales con los del marco NIST CSF para identificar qué le falta y planificar mejoras. ¿Cómo se llama este proceso?",
+    "opciones": [
+      "Análisis de impacto en el negocio (BIA)",
+      "Prueba de penetración (penetration test)",
+      "Análisis de brechas (gap analysis)",
+      "Análisis de causa raíz (root cause analysis)"
+    ],
+    "correcta": 2,
+    "explicacion": "Comparar el estado actual con el deseado es un gap analysis. El BIA mide el impacto de interrupciones; el pentest busca explotar vulnerabilidades; el análisis de causa raíz investiga el origen de un incidente."
+  },
+  {
+    "id": "D1-012",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Para proteger la entrada al centro de datos, una empresa instala un espacio con dos puertas en el que la segunda solo se abre cuando la primera se ha cerrado, impidiendo el acceso a remolque (tailgating). ¿Qué es?",
+    "opciones": [
+      "Vestíbulo de control de acceso (access control vestibule)",
+      "Bolardo (bollard)",
+      "Honeypot",
+      "Sensor de infrarrojos"
+    ],
+    "correcta": 0,
+    "explicacion": "El vestíbulo de control de acceso (antes «mantrap») evita que entren dos personas con una sola autenticación. Los bolardos frenan vehículos; un honeypot es un señuelo informático; un sensor infrarrojo detecta presencia pero no controla el paso."
+  },
+  {
+    "id": "D1-013",
+    "dominio": 1,
+    "objetivo": "1.2",
+    "enunciado": "Un usuario introduce su nombre de usuario y su contraseña y, después, el sistema le permite leer pero no modificar una carpeta. ¿Qué paso del modelo AAA determina que solo pueda leer?",
+    "opciones": [
+      "Autorización (authorization)",
+      "Autenticación (authentication)",
+      "Contabilidad (accounting)",
+      "Identificación (identification)"
+    ],
+    "correcta": 0,
+    "explicacion": "Decidir qué puede hacer un usuario ya autenticado es autorización. La autenticación prueba la identidad; la contabilidad registra lo que hace; la identificación es declarar quién eres."
+  },
+  {
+    "id": "D1-014",
+    "dominio": 1,
+    "objetivo": "1.3",
+    "enunciado": "Antes de aplicar una actualización crítica en el ERP, el comité de cambios exige un procedimiento documentado para volver a la versión anterior si algo falla. ¿Cómo se llama ese elemento?",
+    "opciones": [
+      "Análisis de impacto (impact analysis)",
+      "Ventana de mantenimiento (maintenance window)",
+      "Plan de reversión (backout plan)",
+      "Procedimiento operativo estándar (SOP)"
+    ],
+    "correcta": 2,
+    "explicacion": "El plan de reversión define cómo deshacer el cambio. El análisis de impacto evalúa consecuencias; la ventana de mantenimiento es el horario acordado; un SOP describe tareas rutinarias, no la vuelta atrás de un cambio concreto."
+  },
+  {
+    "id": "D1-015",
+    "dominio": 1,
+    "objetivo": "1.3",
+    "enunciado": "Un equipo aplica un cambio de firewall un martes a las 11:00 sin aprobación y deja sin servicio a la tienda online durante dos horas. ¿Qué elemento de la gestión de cambios habría evitado principalmente el impacto en el negocio?",
+    "opciones": [
+      "Añadir el firewall a la lista de denegados (deny list)",
+      "Instalar un antivirus en el firewall",
+      "Programar el cambio en una ventana de mantenimiento aprobada",
+      "Crear un honeypot"
+    ],
+    "correcta": 2,
+    "explicacion": "Una ventana de mantenimiento aprobada sitúa los cambios en horarios de bajo impacto. Las listas de denegados, el antivirus o un honeypot no tienen relación con controlar cuándo y cómo se aplican los cambios."
+  },
+  {
+    "id": "D1-016",
+    "dominio": 1,
+    "objetivo": "1.3",
+    "enunciado": "Tras actualizar una aplicación heredada (legacy), otra aplicación que dependía de una librería antigua deja de funcionar. ¿Qué consideración técnica de la gestión de cambios no se evaluó correctamente?",
+    "opciones": [
+      "Control de versiones (version control)",
+      "Dependencias (dependencies)",
+      "Propiedad (ownership)",
+      "Lista de permitidos (allow list)"
+    ],
+    "correcta": 1,
+    "explicacion": "El problema es una dependencia no identificada entre aplicaciones. El control de versiones registra cambios en código/documentos; la propiedad identifica al responsable; la allow list restringe qué software se ejecuta."
+  },
+  {
+    "id": "D1-017",
+    "dominio": 1,
+    "objetivo": "1.3",
+    "enunciado": "Después de implementar un cambio aprobado en la red, ¿qué debe actualizarse para que el equipo de respuesta a incidentes trabaje con información correcta?",
+    "opciones": [
+      "La política de uso aceptable (AUP)",
+      "El contrato con el proveedor de internet",
+      "Diagramas de red y documentación asociada",
+      "La lista de revocación de certificados (CRL)"
+    ],
+    "correcta": 2,
+    "explicacion": "La gestión de cambios incluye actualizar diagramas, políticas y procedimientos afectados. La AUP regula el uso por los empleados, el contrato del ISP no se ve afectado y la CRL lista certificados revocados."
+  },
+  {
+    "id": "D1-018",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Alicia quiere enviar a Roberto un archivo que solo Roberto pueda descifrar. ¿Qué clave debe usar Alicia para cifrarlo?",
+    "opciones": [
+      "La clave privada de Roberto",
+      "La clave privada de Alicia",
+      "La clave pública de Alicia",
+      "La clave pública de Roberto"
+    ],
+    "correcta": 3,
+    "explicacion": "Para confidencialidad se cifra con la clave pública del destinatario; solo su clave privada la descifra. Alicia no tiene la privada de Roberto; cifrar con la privada de Alicia sería firmar (cualquiera podría descifrar con su pública); la pública de Alicia solo la descifraría Alicia."
+  },
+  {
+    "id": "D1-019",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Una empresa almacena las contraseñas de los usuarios con SHA-256. Un auditor recomienda añadir un valor aleatorio único a cada contraseña antes de calcular el hash. ¿Qué ataque mitiga principalmente esta recomendación?",
+    "opciones": [
+      "Ataques de degradación (downgrade)",
+      "Ataques con tablas arcoíris (rainbow tables)",
+      "Ataques de repetición (replay)",
+      "Ataques en ruta (on-path)"
+    ],
+    "correcta": 1,
+    "explicacion": "La sal (salt) hace que hashes de contraseñas iguales sean distintos e inutiliza las tablas precalculadas. Un downgrade fuerza protocolos débiles, un replay reutiliza tráfico capturado y un on-path intercepta comunicaciones: la sal no los mitiga."
+  },
+  {
+    "id": "D1-020",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Un comercio electrónico quiere que sus sistemas internos procesen pedidos sin almacenar los números reales de tarjeta, sustituyéndolos por valores sin significado que un servicio externo puede mapear al número real. ¿Qué técnica usa?",
+    "opciones": [
+      "Tokenización (tokenization)",
+      "Esteganografía (steganography)",
+      "Hashing",
+      "Enmascaramiento (data masking)"
+    ],
+    "correcta": 0,
+    "explicacion": "La tokenización reemplaza el dato por un token y guarda la correspondencia en una bóveda segura. La esteganografía oculta datos en otros archivos; un hash no se puede revertir al número original; el enmascaramiento solo oculta parte del dato al mostrarlo."
+  },
+  {
+    "id": "D1-021",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Un banco necesita generar y proteger millones de claves criptográficas con alto rendimiento y protección física contra manipulación. ¿Qué solución es la más adecuada?",
+    "opciones": [
+      "TPM (Trusted Platform Module)",
+      "Certificado autofirmado (self-signed)",
+      "Esteganografía",
+      "HSM (Hardware Security Module)"
+    ],
+    "correcta": 3,
+    "explicacion": "Un HSM es un dispositivo dedicado, resistente a manipulación y diseñado para gestionar claves a gran escala. El TPM es un chip de un solo equipo; un certificado autofirmado no gestiona claves; la esteganografía oculta información."
+  },
+  {
+    "id": "D1-022",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Un navegador necesita comprobar en tiempo real si el certificado de un sitio web ha sido revocado, sin descargar una lista completa. ¿Qué mecanismo utiliza?",
+    "opciones": [
+      "CRL (Certificate Revocation List)",
+      "CSR (Certificate Signing Request)",
+      "Key escrow",
+      "OCSP (Online Certificate Status Protocol)"
+    ],
+    "correcta": 3,
+    "explicacion": "OCSP consulta el estado de un certificado concreto en tiempo real. La CRL es una lista que se descarga periódicamente; el CSR se usa para solicitar un certificado; el key escrow guarda copias de claves."
+  },
+  {
+    "id": "D1-023",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "¿Qué afirmación describe correctamente la diferencia entre cifrado simétrico y asimétrico?",
+    "opciones": [
+      "El simétrico usa una única clave compartida y es más rápido; el asimétrico usa un par de claves y suele emplearse para intercambiar claves y firmar",
+      "El simétrico usa un par de claves y el asimétrico una única clave",
+      "El asimétrico es más rápido y por eso se usa para cifrar grandes volúmenes de datos",
+      "Ambos usan las mismas claves y solo cambia la longitud"
+    ],
+    "correcta": 0,
+    "explicacion": "El cifrado simétrico (AES) usa una clave compartida y es rápido; el asimétrico (RSA, ECC) usa clave pública/privada, es más lento y se usa para intercambio de claves y firmas. Las demás opciones invierten o confunden estas características."
+  },
+  {
+    "id": "D1-024",
+    "dominio": 1,
+    "objetivo": "1.4",
+    "enunciado": "Un portátil corporativo usa cifrado de disco completo y almacena la clave en un chip de la placa base que también verifica que el proceso de arranque no ha sido alterado. ¿Qué componente es?",
+    "opciones": [
+      "HSM (Hardware Security Module)",
+      "KMS (Key Management System)",
+      "CA (Certificate Authority)",
+      "TPM (Trusted Platform Module)"
+    ],
+    "correcta": 3,
+    "explicacion": "El TPM está integrado en la placa, guarda claves (p. ej. BitLocker) y permite el arranque medido. El HSM es un dispositivo externo dedicado; el KMS es un servicio de gestión centralizada; la CA emite certificados."
+  }
+]
