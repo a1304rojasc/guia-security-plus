@@ -1454,5 +1454,789 @@
     ],
     "correcta": 0,
     "explicacion": "En activo-activo ambos nodos atienden tráfico y se cubren mutuamente. Un sitio frío requiere días; una copia diferencial no da disponibilidad inmediata; fail-closed es un modo de fallo de seguridad."
+  },
+  {
+    "id": "D4-001",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Una empresa configura una red Wi-Fi nueva y quiere el protocolo más seguro, que sustituya la clave precompartida por un intercambio resistente a ataques de diccionario offline. ¿Qué debe usar?",
+    "opciones": [
+      "WPA2-PSK con TKIP",
+      "WEP con clave de 128 bits",
+      "WPS con PIN",
+      "WPA3 con SAE"
+    ],
+    "correcta": 3,
+    "explicacion": "WPA3 usa SAE (Simultaneous Authentication of Equals), resistente a ataques de diccionario offline. WPA2-PSK con TKIP es débil; WEP está roto; WPS con PIN es vulnerable a fuerza bruta."
+  },
+  {
+    "id": "D4-002",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Antes de instalar los puntos de acceso de una nueva planta, un técnico recorre el edificio midiendo la señal e interferencias para generar un mapa de calor. ¿Qué actividad realiza?",
+    "opciones": [
+      "Prueba de penetración física",
+      "Análisis de causa raíz",
+      "Ejercicio de mesa",
+      "Estudio de sitio (site survey)"
+    ],
+    "correcta": 3,
+    "explicacion": "Medir cobertura e interferencias para ubicar APs es un site survey, que produce un heat map. Las otras actividades no tienen relación con la planificación inalámbrica."
+  },
+  {
+    "id": "D4-003",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Una empresa permite que los empleados usen su teléfono personal para el correo corporativo, pero quiere poder borrar solo los datos de la empresa si el empleado se va. ¿Qué combinación es más adecuada?",
+    "opciones": [
+      "BYOD con MDM/MAM y contenedorización de los datos corporativos",
+      "COPE sin ninguna gestión",
+      "CYOD con borrado completo del dispositivo",
+      "Prohibir el correo en móviles y usar fax"
+    ],
+    "correcta": 0,
+    "explicacion": "En BYOD el dispositivo es del empleado; la contenedorización con MDM/MAM permite separar y borrar solo los datos corporativos. COPE y CYOD son dispositivos de la empresa; borrar todo un dispositivo personal sería invasivo."
+  },
+  {
+    "id": "D4-004",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Un desarrollador quiere garantizar que los usuarios sepan que su aplicación procede realmente de su empresa y no ha sido modificada. ¿Qué técnica debe usar?",
+    "opciones": [
+      "Sandboxing",
+      "Firma de código (code signing)",
+      "Validación de entradas",
+      "Análisis estático"
+    ],
+    "correcta": 1,
+    "explicacion": "La firma de código prueba el origen y la integridad del software. El sandboxing aísla la ejecución; la validación de entradas evita inyecciones; el análisis estático revisa código fuente."
+  },
+  {
+    "id": "D4-005",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Un formulario web acepta solo números en el campo «edad» y rechaza cualquier otro carácter en el servidor. ¿Qué técnica de seguridad de aplicaciones se aplica?",
+    "opciones": [
+      "Firma de código",
+      "Cookies seguras",
+      "Validación de entradas (input validation)",
+      "Sandboxing"
+    ],
+    "correcta": 2,
+    "explicacion": "Comprobar que la entrada cumple el formato esperado es validación de entradas, clave contra inyecciones. La firma de código verifica el origen; las cookies seguras protegen sesiones; el sandboxing aísla la ejecución."
+  },
+  {
+    "id": "D4-006",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Un equipo de TI aplica a todos los servidores Windows una configuración estándar basada en los CIS Benchmarks y comprueba periódicamente que no se desvían de ella. ¿Qué concepto describe?",
+    "opciones": [
+      "Análisis de impacto en el negocio",
+      "Línea base segura (secure baseline)",
+      "Gestión de parches de terceros",
+      "Honeynet"
+    ],
+    "correcta": 1,
+    "explicacion": "Una configuración de referencia que se establece, despliega y mantiene es una secure baseline. El BIA analiza impacto de interrupciones; los parches son otro proceso; una honeynet es una red señuelo."
+  },
+  {
+    "id": "D4-007",
+    "dominio": 4,
+    "objetivo": "4.1",
+    "enunciado": "Un analista ejecuta un archivo adjunto sospechoso en un entorno aislado y controlado para observar su comportamiento sin riesgo para la red. ¿Qué técnica usa?",
+    "opciones": [
+      "Sandboxing",
+      "Firma de código",
+      "Geofencing",
+      "Tokenización"
+    ],
+    "correcta": 0,
+    "explicacion": "El sandboxing ejecuta código en un entorno aislado. La firma de código verifica el origen; el geofencing usa la ubicación; la tokenización sustituye datos."
+  },
+  {
+    "id": "D4-008",
+    "dominio": 4,
+    "objetivo": "4.2",
+    "enunciado": "Una empresa va a donar 200 portátiles con discos SSD. Quiere asegurarse de que los datos no se puedan recuperar y que los equipos sigan funcionando. ¿Qué método es el más adecuado?",
+    "opciones": [
+      "Desmagnetización (degaussing)",
+      "Borrado criptográfico (crypto erase) o borrado seguro del fabricante",
+      "Trituración física de los discos",
+      "Formateo rápido del sistema operativo"
+    ],
+    "correcta": 1,
+    "explicacion": "En SSD, destruir la clave de cifrado o usar el borrado seguro del fabricante deja el disco reutilizable y sin datos recuperables. La desmagnetización no funciona en SSD; triturar impediría la donación; el formateo rápido deja los datos recuperables."
+  },
+  {
+    "id": "D4-009",
+    "dominio": 4,
+    "objetivo": "4.2",
+    "enunciado": "Un proveedor externo destruye los discos duros de una empresa. ¿Qué documento debe exigir la empresa como prueba?",
+    "opciones": [
+      "Certificado de destrucción (certificate of destruction)",
+      "Acuerdo de nivel de servicio (SLA)",
+      "Lista de revocación de certificados (CRL)",
+      "Política de uso aceptable (AUP)"
+    ],
+    "correcta": 0,
+    "explicacion": "El certificado de destrucción documenta qué se destruyó, cuándo y cómo. El SLA define niveles de servicio, la CRL lista certificados revocados y la AUP regula el uso de recursos."
+  },
+  {
+    "id": "D4-010",
+    "dominio": 4,
+    "objetivo": "4.2",
+    "enunciado": "Durante una auditoría se descubren 15 servidores que no figuran en ningún registro y cuyo responsable nadie conoce. ¿Qué proceso ha fallado?",
+    "opciones": [
+      "Gestión de claves criptográficas",
+      "Respuesta a incidentes",
+      "Inventario y asignación de propietarios de activos (asset management)",
+      "Filtrado DNS"
+    ],
+    "correcta": 2,
+    "explicacion": "Los activos deben inventariarse y tener un propietario asignado desde su adquisición. La gestión de claves, la respuesta a incidentes o el filtrado DNS no tratan del registro de activos."
+  },
+  {
+    "id": "D4-011",
+    "dominio": 4,
+    "objetivo": "4.2",
+    "enunciado": "Una política exige conservar los registros financieros 7 años y eliminarlos de forma segura después. ¿Qué concepto de gestión de datos aplica?",
+    "opciones": [
+      "Clasificación de datos",
+      "Retención de datos (data retention)",
+      "Soberanía de datos",
+      "Tokenización"
+    ],
+    "correcta": 1,
+    "explicacion": "Definir cuánto tiempo se conservan los datos y cuándo se eliminan es retención de datos. La clasificación asigna sensibilidad; la soberanía depende de la ubicación; la tokenización sustituye datos."
+  },
+  {
+    "id": "D4-012",
+    "dominio": 4,
+    "objetivo": "4.2",
+    "enunciado": "Unas cintas magnéticas de copia antiguas deben inutilizarse por completo; no se reutilizarán. ¿Qué método es adecuado y eficaz?",
+    "opciones": [
+      "Desmagnetización (degaussing) seguida de destrucción física",
+      "Borrado criptográfico sin cifrado previo",
+      "Renombrar los archivos",
+      "Formateo rápido"
+    ],
+    "correcta": 0,
+    "explicacion": "La desmagnetización es eficaz en medios magnéticos como las cintas, y la destrucción física lo garantiza. El borrado criptográfico solo funciona si los datos estaban cifrados; renombrar o formatear no elimina datos."
+  },
+  {
+    "id": "D4-013",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Un escáner de vulnerabilidades informa de una vulnerabilidad de Apache en un servidor que en realidad ejecuta Nginx. ¿Qué es este resultado?",
+    "opciones": [
+      "Falso positivo (false positive)",
+      "Falso negativo (false negative)",
+      "Verdadero positivo (true positive)",
+      "Verdadero negativo (true negative)"
+    ],
+    "correcta": 0,
+    "explicacion": "Un aviso de algo que no existe es un falso positivo. Un falso negativo sería no detectar una vulnerabilidad real; un verdadero positivo sería un hallazgo correcto; un verdadero negativo, la ausencia correcta de alerta."
+  },
+  {
+    "id": "D4-014",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Un analista debe priorizar 300 vulnerabilidades. ¿Qué sistema estándar proporciona una puntuación de gravedad de 0 a 10?",
+    "opciones": [
+      "CVE (Common Vulnerabilities and Exposures)",
+      "SCAP",
+      "CVSS (Common Vulnerability Scoring System)",
+      "SOAR"
+    ],
+    "correcta": 2,
+    "explicacion": "CVSS puntúa la gravedad de 0 a 10. CVE es el identificador único de cada vulnerabilidad; SCAP automatiza evaluaciones de configuración; SOAR orquesta respuestas."
+  },
+  {
+    "id": "D4-015",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Tras aplicar un parche crítico, el equipo vuelve a ejecutar el escáner para confirmar que la vulnerabilidad ha desaparecido. ¿Qué fase de la gestión de vulnerabilidades es?",
+    "opciones": [
+      "Identificación",
+      "Validación de la remediación (rescanning)",
+      "Priorización",
+      "Aceptación del riesgo"
+    ],
+    "correcta": 1,
+    "explicacion": "Re-escanear tras remediar valida que la corrección funcionó. La identificación descubre vulnerabilidades; la priorización ordena; la aceptación decide no corregir."
+  },
+  {
+    "id": "D4-016",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Una empresa invita a investigadores externos a encontrar fallos en su aplicación y paga una recompensa por cada vulnerabilidad válida. ¿Qué es?",
+    "opciones": [
+      "Auditoría interna",
+      "Ejercicio de mesa",
+      "Programa de recompensas por errores (bug bounty)",
+      "Honeypot"
+    ],
+    "correcta": 2,
+    "explicacion": "Pagar a investigadores externos por fallos válidos es un bug bounty. Una auditoría interna la hace la propia empresa; un tabletop es una discusión de escenarios; un honeypot es un señuelo."
+  },
+  {
+    "id": "D4-017",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Un sistema heredado tiene una vulnerabilidad crítica sin parche disponible. La dirección decide restringir su acceso a una VLAN aislada y documentar una excepción temporal. ¿Qué respuesta es?",
+    "opciones": [
+      "Transferencia del riesgo mediante un seguro",
+      "Re-escaneo para validar el parche",
+      "Falso negativo",
+      "Control compensatorio con excepción documentada"
+    ],
+    "correcta": 3,
+    "explicacion": "Ante la imposibilidad de parchear se aplica un control compensatorio (aislamiento) y se documenta una excepción. No se contrata un seguro, no hay parche que validar y no es un error de detección."
+  },
+  {
+    "id": "D4-018",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Un equipo de seguridad se suscribe a un centro sectorial donde bancos comparten indicadores de amenazas. ¿Qué fuente de inteligencia usa?",
+    "opciones": [
+      "Escáner de vulnerabilidades local",
+      "CVSS",
+      "Bug bounty",
+      "ISAC (Information Sharing and Analysis Center)"
+    ],
+    "correcta": 3,
+    "explicacion": "Los ISAC son centros sectoriales de intercambio de inteligencia. Un escáner local no aporta inteligencia externa compartida; CVSS es una puntuación; el bug bounty busca fallos en tus sistemas."
+  },
+  {
+    "id": "D4-019",
+    "dominio": 4,
+    "objetivo": "4.3",
+    "enunciado": "Un escáner no detecta una vulnerabilidad que realmente existe en el servidor y que después es explotada. ¿Qué tipo de resultado fue?",
+    "opciones": [
+      "Falso positivo (false positive)",
+      "Verdadero positivo",
+      "Falso negativo (false negative)",
+      "Excepción"
+    ],
+    "correcta": 2,
+    "explicacion": "No detectar una vulnerabilidad real es un falso negativo, el más peligroso. Un falso positivo es una alerta errónea; un verdadero positivo sería detectarla; una excepción es una decisión de no remediar."
+  },
+  {
+    "id": "D4-020",
+    "dominio": 4,
+    "objetivo": "4.4",
+    "enunciado": "Una empresa quiere centralizar los logs de firewalls, servidores y EDR, correlacionarlos y generar alertas cuando se combinen eventos sospechosos. ¿Qué herramienta necesita?",
+    "opciones": [
+      "DLP",
+      "NetFlow",
+      "SCAP",
+      "SIEM"
+    ],
+    "correcta": 3,
+    "explicacion": "El SIEM agrega, correlaciona y alerta sobre eventos de múltiples fuentes. DLP evita fugas de datos; NetFlow registra flujos de red; SCAP automatiza evaluaciones de configuración."
+  },
+  {
+    "id": "D4-021",
+    "dominio": 4,
+    "objetivo": "4.4",
+    "enunciado": "El SOC recibe cientos de alertas diarias de una regla que casi siempre resulta ser tráfico legítimo de un escáner interno. ¿Qué debe hacer?",
+    "opciones": [
+      "Desactivar el SIEM",
+      "Ignorar todas las alertas de ese día",
+      "Aumentar el número de alertas",
+      "Ajustar la regla (alert tuning) para excluir ese tráfico conocido"
+    ],
+    "correcta": 3,
+    "explicacion": "El ajuste de alertas reduce falsos positivos y la fatiga de alertas. Desactivar el SIEM o ignorar alertas deja la organización ciega; aumentar alertas empeora el problema."
+  },
+  {
+    "id": "D4-022",
+    "dominio": 4,
+    "objetivo": "4.4",
+    "enunciado": "Un administrador necesita saber qué hosts internos se comunicaron con una IP externa sospechosa, cuántos bytes enviaron y cuándo, sin almacenar el contenido completo de los paquetes. ¿Qué fuente usa?",
+    "opciones": [
+      "NetFlow",
+      "Captura completa de paquetes (pcap)",
+      "SNMP traps",
+      "Antivirus"
+    ],
+    "correcta": 0,
+    "explicacion": "NetFlow registra metadatos de flujos (origen, destino, puertos, bytes, tiempo). Un pcap guarda todo el contenido; SNMP traps son alertas de dispositivos; el antivirus no registra flujos."
+  },
+  {
+    "id": "D4-023",
+    "dominio": 4,
+    "objetivo": "4.4",
+    "enunciado": "Un switch envía automáticamente una notificación al sistema de gestión cuando un puerto cae. ¿Qué mecanismo usa?",
+    "opciones": [
+      "NetFlow",
+      "SAML",
+      "SNMP trap",
+      "DKIM"
+    ],
+    "correcta": 2,
+    "explicacion": "Un SNMP trap es una notificación enviada por el dispositivo ante un evento. NetFlow registra flujos; SAML es para SSO; DKIM firma correos."
+  },
+  {
+    "id": "D4-024",
+    "dominio": 4,
+    "objetivo": "4.4",
+    "enunciado": "Un equipo quiere comprobar automáticamente que la configuración de todos sus servidores cumple una lista estándar de controles usando un formato común legible por máquina. ¿Qué estándar le ayuda?",
+    "opciones": [
+      "SNMP",
+      "NetFlow",
+      "SCAP (Security Content Automation Protocol)",
+      "OAuth"
+    ],
+    "correcta": 2,
+    "explicacion": "SCAP estandariza la evaluación automatizada de configuraciones y vulnerabilidades. SNMP gestiona dispositivos; NetFlow registra flujos; OAuth es autorización."
+  },
+  {
+    "id": "D4-025",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Un firewall tiene reglas que permiten HTTPS y DNS. ¿Qué ocurre con el tráfico que no coincide con ninguna regla, si sigue las buenas prácticas?",
+    "opciones": [
+      "Se permite por defecto",
+      "Se envía al honeypot",
+      "Se cifra automáticamente",
+      "Se deniega por la regla de denegación implícita (implicit deny)"
+    ],
+    "correcta": 3,
+    "explicacion": "Las buenas prácticas terminan las ACL con un «denegar todo» implícito. Permitir por defecto sería inseguro; ni se redirige a un honeypot ni se cifra automáticamente."
+  },
+  {
+    "id": "D4-026",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Los clientes de una empresa reciben correos falsos que parecen enviados desde su dominio. ¿Qué registro DNS indica qué servidores están autorizados a enviar correo en nombre del dominio?",
+    "opciones": [
+      "DKIM",
+      "DMARC",
+      "SPF",
+      "MX"
+    ],
+    "correcta": 2,
+    "explicacion": "SPF lista los servidores autorizados a enviar. DKIM firma los mensajes; DMARC define la política cuando SPF/DKIM fallan e informa; MX indica dónde se recibe el correo."
+  },
+  {
+    "id": "D4-027",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Una empresa quiere indicar a los servidores receptores que rechacen los correos que fallen SPF y DKIM y recibir informes de los intentos de suplantación. ¿Qué debe configurar?",
+    "opciones": [
+      "SPF solamente",
+      "DNSSEC",
+      "DMARC",
+      "SNMPv3"
+    ],
+    "correcta": 2,
+    "explicacion": "DMARC define la política (none/quarantine/reject) y el envío de informes. SPF solo lista servidores; DNSSEC firma respuestas DNS; SNMPv3 gestiona dispositivos."
+  },
+  {
+    "id": "D4-028",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Un equipo de seguridad quiere detectar cuándo se modifica cualquier archivo del directorio de binarios del sistema en sus servidores. ¿Qué herramienta es adecuada?",
+    "opciones": [
+      "Filtrado DNS",
+      "Balanceador de carga",
+      "Monitorización de integridad de archivos (FIM)",
+      "Proxy directo"
+    ],
+    "correcta": 2,
+    "explicacion": "FIM detecta cambios en archivos críticos comparando hashes. El filtrado DNS bloquea dominios; el balanceador reparte tráfico; el proxy media la navegación."
+  },
+  {
+    "id": "D4-029",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Una empresa quiere impedir que los empleados envíen números de tarjeta de crédito por correo o los suban a servicios en la nube no autorizados. ¿Qué solución es la más adecuada?",
+    "opciones": [
+      "DLP (Data Loss Prevention)",
+      "IDS basado en firmas",
+      "NAC",
+      "Proxy inverso"
+    ],
+    "correcta": 0,
+    "explicacion": "DLP inspecciona contenido y bloquea la salida de datos sensibles. Un IDS detecta ataques; NAC controla qué dispositivos entran en la red; un proxy inverso protege servidores."
+  },
+  {
+    "id": "D4-030",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "El equipo de red debe reemplazar Telnet para administrar los switches. ¿Qué protocolo y puerto debe usar?",
+    "opciones": [
+      "HTTP, puerto 80",
+      "SSH, puerto 22",
+      "FTP, puerto 21",
+      "SNMPv1, puerto 161"
+    ],
+    "correcta": 1,
+    "explicacion": "SSH (22) cifra la sesión de administración remota. HTTP, FTP y SNMPv1 transmiten datos en claro."
+  },
+  {
+    "id": "D4-031",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "Antes de permitir que un portátil se conecte a la red, el sistema comprueba que tiene el antivirus actualizado y los parches instalados; si no, lo envía a una VLAN de remediación. ¿Qué tecnología es?",
+    "opciones": [
+      "DLP",
+      "SIEM",
+      "WAF",
+      "NAC (Network Access Control)"
+    ],
+    "correcta": 3,
+    "explicacion": "NAC evalúa el estado (posture) del dispositivo antes de darle acceso. DLP evita fugas de datos; SIEM correlaciona logs; WAF protege aplicaciones web."
+  },
+  {
+    "id": "D4-032",
+    "dominio": 4,
+    "objetivo": "4.5",
+    "enunciado": "El equipo quiere detectar a un empleado que empieza a descargar volúmenes de datos muy superiores a su patrón habitual a las 3 de la madrugada. ¿Qué tecnología es más adecuada?",
+    "opciones": [
+      "Analítica de comportamiento de usuarios y entidades (UEBA)",
+      "Antivirus basado en firmas",
+      "Filtrado DNS",
+      "SPF"
+    ],
+    "correcta": 0,
+    "explicacion": "UEBA establece una línea base de comportamiento y detecta desviaciones. Un antivirus por firmas no ve comportamientos; el filtrado DNS bloquea dominios; SPF es para correo."
+  },
+  {
+    "id": "D4-033",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Un empleado deja la empresa el viernes. El lunes, su cuenta sigue activa y se usa para acceder a archivos. ¿Qué proceso falló?",
+    "opciones": [
+      "Federación",
+      "Atestación de hardware",
+      "Single sign-on",
+      "Desaprovisionamiento (deprovisioning) de cuentas"
+    ],
+    "correcta": 3,
+    "explicacion": "Al salir un empleado se deben deshabilitar sus cuentas (deprovisioning). La federación, la atestación de hardware o el SSO no gestionan la baja de usuarios."
+  },
+  {
+    "id": "D4-034",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Los empleados inician sesión una vez en el portal corporativo y acceden sin volver a autenticarse a varias aplicaciones SaaS mediante aserciones XML firmadas. ¿Qué tecnología se usa?",
+    "opciones": [
+      "SAML para SSO federado",
+      "LDAP sin cifrar",
+      "RADIUS",
+      "Kerberos con NTLM"
+    ],
+    "correcta": 0,
+    "explicacion": "SAML intercambia aserciones XML entre el proveedor de identidad y los proveedores de servicio para SSO web. LDAP es un directorio; RADIUS es AAA de red; NTLM es un protocolo heredado de Windows."
+  },
+  {
+    "id": "D4-035",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Una app de terceros solicita permiso para leer tu calendario de Google sin conocer tu contraseña. ¿Qué protocolo permite esta autorización delegada?",
+    "opciones": [
+      "SAML",
+      "LDAP",
+      "TACACS+",
+      "OAuth"
+    ],
+    "correcta": 3,
+    "explicacion": "OAuth permite delegar acceso limitado a recursos sin compartir credenciales. SAML es principalmente SSO empresarial; LDAP es un directorio; TACACS+ es AAA para dispositivos de red."
+  },
+  {
+    "id": "D4-036",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "En un sistema militar, cada documento tiene una etiqueta (Confidencial, Secreto, Alto secreto) y los usuarios una habilitación; ni siquiera el creador puede cambiar quién accede. ¿Qué modelo es?",
+    "opciones": [
+      "Control de acceso obligatorio (MAC)",
+      "Control de acceso discrecional (DAC)",
+      "Control basado en roles (RBAC)",
+      "Control basado en reglas"
+    ],
+    "correcta": 0,
+    "explicacion": "En MAC el sistema decide según etiquetas y habilitaciones, no el propietario. En DAC decide el propietario; RBAC usa roles de puesto; el basado en reglas aplica reglas globales como horarios."
+  },
+  {
+    "id": "D4-037",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "El sistema de historias clínicas permite a un médico acceder solo a pacientes de su planta, durante su turno y desde equipos del hospital. ¿Qué modelo de control de acceso combina estos criterios?",
+    "opciones": [
+      "Control basado en atributos (ABAC)",
+      "Control discrecional (DAC)",
+      "Control obligatorio (MAC)",
+      "Control basado en roles puro (RBAC)"
+    ],
+    "correcta": 0,
+    "explicacion": "ABAC combina atributos del usuario (planta), del recurso (paciente) y del entorno (horario, equipo). DAC depende del propietario; MAC de etiquetas; RBAC solo del rol."
+  },
+  {
+    "id": "D4-038",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Al crear un archivo en un servidor Windows, su propietario decide a qué compañeros da permiso de lectura o escritura. ¿Qué modelo es?",
+    "opciones": [
+      "Control de acceso discrecional (DAC)",
+      "Control de acceso obligatorio (MAC)",
+      "Control basado en atributos (ABAC)",
+      "Control basado en reglas"
+    ],
+    "correcta": 0,
+    "explicacion": "En DAC el propietario del recurso decide los permisos. MAC usa etiquetas impuestas por el sistema; ABAC evalúa atributos; el basado en reglas aplica reglas globales."
+  },
+  {
+    "id": "D4-039",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Un sistema de acceso pide contraseña y un PIN de 6 dígitos memorizado. ¿Cuántos factores de autenticación distintos se usan?",
+    "opciones": [
+      "Dos, porque son dos credenciales distintas",
+      "Tres, contando el nombre de usuario",
+      "Uno, porque ambos son «algo que sabes»",
+      "Ninguno, porque el PIN no es un factor"
+    ],
+    "correcta": 2,
+    "explicacion": "Contraseña y PIN pertenecen al mismo factor (conocimiento). Para MFA hacen falta factores de categorías distintas, como contraseña + token. El nombre de usuario es identificación, no un factor."
+  },
+  {
+    "id": "D4-040",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Los administradores no tienen privilegios permanentes; solicitan acceso de administrador para una tarea, se aprueba durante 2 horas y luego se revoca automáticamente. ¿Qué técnica de PAM es?",
+    "opciones": [
+      "Federación",
+      "Acceso justo a tiempo (just-in-time)",
+      "Contraseñas sin caducidad",
+      "Control discrecional"
+    ],
+    "correcta": 1,
+    "explicacion": "JIT concede privilegios solo cuando se necesitan y por tiempo limitado. La federación comparte identidades entre organizaciones; las contraseñas sin caducidad son una mala práctica; DAC es un modelo de acceso."
+  },
+  {
+    "id": "D4-041",
+    "dominio": 4,
+    "objetivo": "4.6",
+    "enunciado": "Las contraseñas de las cuentas de servicio y de administración se guardan en una bóveda que las rota automáticamente y registra quién las usa. ¿Qué técnica es?",
+    "opciones": [
+      "Hoja de cálculo compartida cifrada",
+      "Inicio de sesión único (SSO)",
+      "Bóveda de contraseñas (password vaulting) de una solución PAM",
+      "Clonación RFID"
+    ],
+    "correcta": 2,
+    "explicacion": "El password vaulting de PAM almacena, rota y audita credenciales privilegiadas. Una hoja de cálculo no rota ni audita; SSO es para usuarios finales; la clonación RFID es un ataque."
+  },
+  {
+    "id": "D4-042",
+    "dominio": 4,
+    "objetivo": "4.7",
+    "enunciado": "Un equipo de seguridad configura un sistema que, cuando el SIEM detecta phishing, extrae automáticamente los indicadores, bloquea el remitente, busca el correo en todos los buzones y abre un ticket. ¿Qué tecnología usa?",
+    "opciones": [
+      "DLP",
+      "SOAR con playbooks automatizados",
+      "UPS",
+      "NetFlow"
+    ],
+    "correcta": 1,
+    "explicacion": "SOAR orquesta y automatiza respuestas mediante playbooks. DLP evita fugas; un UPS da energía; NetFlow registra flujos."
+  },
+  {
+    "id": "D4-043",
+    "dominio": 4,
+    "objetivo": "4.7",
+    "enunciado": "¿Cuál es un riesgo de depender mucho de scripts de automatización para tareas de seguridad?",
+    "opciones": [
+      "Que reduzcan el tiempo de respuesta",
+      "Que apliquen las líneas base de forma consistente",
+      "Que liberen tiempo del personal",
+      "Que se conviertan en un punto único de fallo y generen deuda técnica si no se mantienen"
+    ],
+    "correcta": 3,
+    "explicacion": "La automatización puede crear complejidad, puntos únicos de fallo y deuda técnica. Las demás opciones son beneficios de la automatización, no riesgos."
+  },
+  {
+    "id": "D4-044",
+    "dominio": 4,
+    "objetivo": "4.7",
+    "enunciado": "Al crear un empleado en el sistema de RR. HH., se crean automáticamente su cuenta, sus grupos de acceso según el puesto y su buzón de correo. ¿Qué caso de uso de automatización es?",
+    "opciones": [
+      "Análisis forense",
+      "Aprovisionamiento de usuarios (user provisioning)",
+      "Retención legal",
+      "Ejercicio de mesa"
+    ],
+    "correcta": 1,
+    "explicacion": "Crear cuentas y permisos automáticamente es aprovisionamiento de usuarios. El análisis forense, la retención legal y los ejercicios de mesa no tratan de crear cuentas."
+  },
+  {
+    "id": "D4-045",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Un analista confirma que un servidor web está comprometido. ¿Cuál es el siguiente paso según el proceso de respuesta a incidentes?",
+    "opciones": [
+      "Lecciones aprendidas (lessons learned)",
+      "Contención (containment)",
+      "Recuperación (recovery)",
+      "Preparación (preparation)"
+    ],
+    "correcta": 1,
+    "explicacion": "Tras la detección y el análisis viene la contención para limitar el daño. Las lecciones aprendidas van al final; la recuperación después de la erradicación; la preparación es previa al incidente."
+  },
+  {
+    "id": "D4-046",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Tras eliminar el malware y restaurar los sistemas, el equipo se reúne para documentar qué funcionó, qué falló y qué cambiar. ¿Qué fase es?",
+    "opciones": [
+      "Detección",
+      "Contención",
+      "Lecciones aprendidas (lessons learned)",
+      "Erradicación"
+    ],
+    "correcta": 2,
+    "explicacion": "La revisión post-incidente para mejorar es la fase de lecciones aprendidas. Detección, contención y erradicación son fases anteriores de gestión del incidente."
+  },
+  {
+    "id": "D4-047",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Un investigador forense debe recoger evidencias de un equipo encendido. ¿Qué debe capturar primero según el orden de volatilidad?",
+    "opciones": [
+      "El disco duro",
+      "Las copias de seguridad en cinta",
+      "La memoria RAM",
+      "Los logs almacenados en un servidor remoto"
+    ],
+    "correcta": 2,
+    "explicacion": "La RAM es más volátil que el disco, los logs remotos o las copias en cinta y se pierde al apagar. Por eso se captura primero."
+  },
+  {
+    "id": "D4-048",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Un disco con evidencias pasó por las manos de tres técnicos, pero no se registró quién lo tuvo entre el martes y el jueves. ¿Qué consecuencia es más probable en un juicio?",
+    "opciones": [
+      "La evidencia se vuelve más fiable",
+      "La evidencia puede ser inadmisible por romperse la cadena de custodia",
+      "No tiene ninguna consecuencia si el disco está cifrado",
+      "Se aplica automáticamente una retención legal"
+    ],
+    "correcta": 1,
+    "explicacion": "Sin un registro completo de la cadena de custodia no se puede demostrar que la evidencia no se alteró. El cifrado no lo soluciona y la retención legal es otro concepto (obligación de conservar)."
+  },
+  {
+    "id": "D4-049",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "El departamento legal notifica que la empresa ha sido demandada y que no se puede borrar ningún correo relacionado con un proyecto, aunque la política de retención lo indique. ¿Qué es?",
+    "opciones": [
+      "Cadena de custodia",
+      "Retención legal (legal hold)",
+      "Lecciones aprendidas",
+      "Threat hunting"
+    ],
+    "correcta": 1,
+    "explicacion": "La retención legal obliga a conservar datos relevantes para un litigio, por encima de la política de retención. La cadena de custodia registra el manejo de evidencias; las otras opciones no tienen relación."
+  },
+  {
+    "id": "D4-050",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Sin ninguna alerta previa, un analista revisa proactivamente los logs buscando señales de técnicas de un grupo APT recién publicado. ¿Qué actividad realiza?",
+    "opciones": [
+      "Contención",
+      "Búsqueda de amenazas (threat hunting)",
+      "Ejercicio de mesa",
+      "Gestión de cambios"
+    ],
+    "correcta": 1,
+    "explicacion": "Buscar proactivamente amenazas no detectadas es threat hunting. La contención responde a un incidente confirmado; el tabletop es un ejercicio de discusión; la gestión de cambios controla modificaciones."
+  },
+  {
+    "id": "D4-051",
+    "dominio": 4,
+    "objetivo": "4.8",
+    "enunciado": "Tras adquirir una imagen bit a bit del disco de un sospechoso, ¿qué hace el analista para demostrar que la copia es idéntica al original?",
+    "opciones": [
+      "Calcula y compara el hash de ambos",
+      "Comprime la imagen con ZIP",
+      "Cifra la copia con la clave pública del juez",
+      "Formatea el disco original"
+    ],
+    "correcta": 0,
+    "explicacion": "Comparar hashes demuestra que la copia es exacta. Comprimir o cifrar no prueba identidad, y formatear el original destruye la evidencia."
+  },
+  {
+    "id": "D4-052",
+    "dominio": 4,
+    "objetivo": "4.9",
+    "enunciado": "Un analista sospecha que un correo de phishing fue enviado a través de un servidor concreto. ¿Qué fuente revisa primero para ver la ruta del mensaje?",
+    "opciones": [
+      "Los logs del SAI",
+      "El escaneo de vulnerabilidades del mes pasado",
+      "El certificado TLS del sitio web corporativo",
+      "Las cabeceras del correo (metadatos)"
+    ],
+    "correcta": 3,
+    "explicacion": "Las cabeceras «Received» muestran los servidores por los que pasó el correo: son metadatos. Los logs del SAI, el escaneo antiguo o el certificado del sitio no muestran esa ruta."
+  },
+  {
+    "id": "D4-053",
+    "dominio": 4,
+    "objetivo": "4.9",
+    "enunciado": "Durante una investigación se necesita reconstruir exactamente qué comandos envió un atacante por una sesión HTTP no cifrada. ¿Qué fuente de datos lo permite?",
+    "opciones": [
+      "NetFlow",
+      "Logs de SNMP",
+      "Dashboard de disponibilidad",
+      "Captura de paquetes (packet capture)"
+    ],
+    "correcta": 3,
+    "explicacion": "La captura de paquetes guarda el contenido completo del tráfico. NetFlow solo guarda metadatos; SNMP y los dashboards no registran el contenido de las sesiones."
+  },
+  {
+    "id": "D4-054",
+    "dominio": 4,
+    "objetivo": "4.9",
+    "enunciado": "Un analista quiere saber si una conexión saliente hacia una IP maliciosa fue permitida o bloqueada en el perímetro. ¿Qué log consulta?",
+    "opciones": [
+      "Logs de la aplicación de nóminas",
+      "Logs del SAI",
+      "Metadatos EXIF de una imagen",
+      "Logs del firewall"
+    ],
+    "correcta": 3,
+    "explicacion": "El firewall registra conexiones permitidas o denegadas por IP y puerto. La aplicación de nóminas, el SAI o el EXIF no registran el tráfico perimetral."
+  },
+  {
+    "id": "D4-055",
+    "dominio": 4,
+    "objetivo": "4.9",
+    "enunciado": "Se investiga una fuga y se quiere conocer qué usuario inició sesión en un servidor Windows y a qué hora. ¿Qué fuente es la más directa?",
+    "opciones": [
+      "Logs de seguridad del sistema operativo (eventos de inicio de sesión)",
+      "Logs del IPS",
+      "Escaneo de vulnerabilidades",
+      "NetFlow"
+    ],
+    "correcta": 0,
+    "explicacion": "Los eventos de inicio de sesión del SO registran usuario y hora. El IPS registra firmas de ataque; el escaneo muestra vulnerabilidades; NetFlow registra flujos de red, no usuarios."
+  },
+  {
+    "id": "D4-056",
+    "dominio": 4,
+    "objetivo": "4.9",
+    "enunciado": "Un analista quiere saber qué vulnerabilidades tenía un servidor antes de ser comprometido para determinar el vector probable. ¿Qué fuente consulta?",
+    "opciones": [
+      "Los logs del SAI",
+      "Los informes de escaneos de vulnerabilidades previos",
+      "La política de uso aceptable",
+      "La lista de revocación de certificados"
+    ],
+    "correcta": 1,
+    "explicacion": "Los escaneos previos muestran qué estaba expuesto y ayudan a deducir el vector de entrada. Las demás fuentes no informan sobre vulnerabilidades."
   }
 ]
