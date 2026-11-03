@@ -334,5 +334,621 @@
     ],
     "correcta": 3,
     "explicacion": "El TPM está integrado en la placa, guarda claves (p. ej. BitLocker) y permite el arranque medido. El HSM es un dispositivo externo dedicado; el KMS es un servicio de gestión centralizada; la CA emite certificados."
+  },
+  {
+    "id": "D2-001",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "Un grupo con amplios recursos lleva meses dentro de la red de un fabricante de defensa, moviéndose con sigilo y exfiltrando planos de forma lenta. ¿Qué actor de amenaza es el más probable?",
+    "opciones": [
+      "Hacktivista (hacktivist)",
+      "Estado-nación (nation-state)",
+      "Atacante sin experiencia (unskilled attacker)",
+      "TI en la sombra (shadow IT)"
+    ],
+    "correcta": 1,
+    "explicacion": "Persistencia prolongada, sigilo, grandes recursos y espionaje industrial-militar son rasgos de una APT de estado-nación. Un hacktivista busca visibilidad ideológica; un aficionado no tiene esa sofisticación; el shadow IT no es malicioso."
+  },
+  {
+    "id": "D2-002",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "Tras anunciar la apertura de una mina, la web de una empresa sufre un DDoS y su página principal es sustituida por un mensaje en defensa del medio ambiente. ¿Qué actor y motivación encajan mejor?",
+    "opciones": [
+      "Crimen organizado con motivación económica",
+      "Hacktivista con motivación ideológica",
+      "Estado-nación con motivación de espionaje",
+      "Amenaza interna con motivación de venganza"
+    ],
+    "correcta": 1,
+    "explicacion": "El defacement con un mensaje político/ambiental es típico de hacktivistas. El crimen organizado busca dinero (ransomware, fraude); un estado-nación actuaría con sigilo; nada indica a un empleado vengativo."
+  },
+  {
+    "id": "D2-003",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "El departamento de marketing contrata por su cuenta una herramienta SaaS de análisis y sube a ella datos de clientes sin informar a TI. ¿Cómo se clasifica esta amenaza?",
+    "opciones": [
+      "Amenaza persistente avanzada (APT)",
+      "TI en la sombra (shadow IT)",
+      "Hacktivismo",
+      "Ataque a la cadena de suministro (supply chain)"
+    ],
+    "correcta": 1,
+    "explicacion": "Usar tecnología no aprobada por TI es shadow IT, normalmente sin intención maliciosa. No es una APT ni hacktivismo; tampoco es un ataque a la cadena de suministro, que implicaría comprometer a un proveedor."
+  },
+  {
+    "id": "D2-004",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "Un grupo cifra los servidores de un hospital y exige 2 millones en criptomonedas, ofreciendo además «soporte» para pagar. ¿Qué actor y motivación son más probables?",
+    "opciones": [
+      "Hacktivista, motivación filosófica",
+      "Estado-nación, motivación de guerra",
+      "Crimen organizado, motivación económica",
+      "Atacante sin experiencia, motivación de notoriedad"
+    ],
+    "correcta": 2,
+    "explicacion": "El ransomware con estructura de «servicio» y pago es típico del crimen organizado con fines económicos. Los hacktivistas buscan difundir un mensaje; un estado-nación prioriza espionaje o disrupción; un aficionado no suele operar con esa estructura."
+  },
+  {
+    "id": "D2-005",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "Un administrador de sistemas descontento, que sabe que va a ser despedido, crea una cuenta oculta para acceder después de su salida. ¿Qué tipo de actor representa?",
+    "opciones": [
+      "Hacktivista",
+      "Estado-nación",
+      "Atacante sin experiencia (unskilled attacker)",
+      "Amenaza interna (insider threat)"
+    ],
+    "correcta": 3,
+    "explicacion": "Es alguien con acceso legítimo que lo usa de forma maliciosa: amenaza interna, con motivación probable de venganza. Los demás actores son externos y no tienen acceso legítimo previo."
+  },
+  {
+    "id": "D2-006",
+    "dominio": 2,
+    "objetivo": "2.1",
+    "enunciado": "Un adolescente descarga una herramienta de DDoS de un foro y la lanza contra el servidor de juegos de su instituto sin entender cómo funciona. ¿Qué actor describe?",
+    "opciones": [
+      "Crimen organizado",
+      "Estado-nación",
+      "Atacante sin experiencia (unskilled attacker)",
+      "Amenaza interna"
+    ],
+    "correcta": 2,
+    "explicacion": "Usar herramientas ajenas sin conocimientos es el perfil del atacante sin experiencia (script kiddie). No tiene los recursos del crimen organizado ni de un estado-nación, ni es un empleado con acceso."
+  },
+  {
+    "id": "D2-007",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Varios empleados reciben un SMS que simula ser de su banco y les pide confirmar su PIN en un enlace. ¿Qué técnica es?",
+    "opciones": [
+      "Smishing",
+      "Vishing",
+      "Whaling",
+      "Watering hole"
+    ],
+    "correcta": 0,
+    "explicacion": "Phishing por SMS es smishing. Vishing es por voz; whaling se dirige a altos directivos; watering hole consiste en infectar un sitio web que visitan las víctimas."
+  },
+  {
+    "id": "D2-008",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "El director financiero recibe una llamada de alguien que se hace pasar por el CEO y le pide una transferencia urgente, explicando que está cerrando una adquisición confidencial. ¿Qué técnicas se combinan?",
+    "opciones": [
+      "Smishing y typosquatting",
+      "Watering hole y spear phishing",
+      "Vishing y pretexto (pretexting)",
+      "Typosquatting y suplantación de marca"
+    ],
+    "correcta": 2,
+    "explicacion": "Es una llamada (vishing) con una historia inventada para justificar la petición (pretexting), además de suplantación. No hay SMS, dominios mal escritos ni sitios web infectados."
+  },
+  {
+    "id": "D2-009",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Los empleados de una empresa aeronáutica visitan a menudo un foro técnico del sector. Un atacante compromete ese foro para infectar a quienes lo visitan. ¿Qué tipo de ataque es?",
+    "opciones": [
+      "Typosquatting",
+      "Whaling",
+      "Smishing",
+      "Abrevadero (watering hole)"
+    ],
+    "correcta": 3,
+    "explicacion": "Infectar un sitio legítimo frecuentado por el objetivo es un ataque de abrevadero. Typosquatting registra dominios mal escritos; whaling es phishing a directivos; smishing es por SMS."
+  },
+  {
+    "id": "D2-010",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un atacante registra el dominio «rnicrosoft.com» (con «rn» en lugar de «m») para engañar a los usuarios. ¿Cómo se llama esta técnica?",
+    "opciones": [
+      "Pretexting",
+      "Typosquatting",
+      "Watering hole",
+      "Vishing"
+    ],
+    "correcta": 1,
+    "explicacion": "Registrar dominios parecidos con errores tipográficos es typosquatting. Pretexting es una historia inventada; watering hole compromete un sitio frecuentado; vishing es por voz."
+  },
+  {
+    "id": "D2-011",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un empleado encuentra un USB con la etiqueta «Bonificaciones 2026» en el aparcamiento y lo conecta a su equipo. ¿Qué vector de amenaza se ha aprovechado?",
+    "opciones": [
+      "Credenciales por defecto (default credentials)",
+      "Medios extraíbles (removable devices)",
+      "Red inalámbrica insegura",
+      "Software sin soporte (unsupported software)"
+    ],
+    "correcta": 1,
+    "explicacion": "Dejar USB infectados para que alguien los conecte explota el vector de medios extraíbles. No intervienen contraseñas por defecto, redes Wi-Fi ni software sin soporte."
+  },
+  {
+    "id": "D2-012",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un auditor descubre que las cámaras IP de la empresa siguen usando el usuario «admin» y la contraseña «admin». ¿Qué vector de ataque representa?",
+    "opciones": [
+      "Typosquatting",
+      "Cadena de suministro (supply chain)",
+      "Credenciales por defecto (default credentials)",
+      "Ingeniería social"
+    ],
+    "correcta": 2,
+    "explicacion": "Mantener las credenciales de fábrica es un vector clásico. Typosquatting usa dominios, la cadena de suministro implica a proveedores comprometidos y la ingeniería social manipula a personas."
+  },
+  {
+    "id": "D2-013",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un proveedor de servicios gestionados (MSP) con acceso remoto a los clientes es comprometido y los atacantes usan ese acceso para desplegar ransomware en todos sus clientes. ¿Qué tipo de vector es?",
+    "opciones": [
+      "Medios extraíbles",
+      "Watering hole",
+      "Puertos abiertos",
+      "Cadena de suministro (supply chain) a través de un proveedor de servicios"
+    ],
+    "correcta": 3,
+    "explicacion": "Comprometer a un proveedor para llegar a sus clientes es un ataque a la cadena de suministro (MSP). No intervienen USB, sitios web infectados ni un puerto concreto expuesto."
+  },
+  {
+    "id": "D2-014",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un consejero delegado recibe un correo muy personalizado, con datos de su agenda real, que le pide revisar un «documento del consejo». ¿Cuál es el término más preciso?",
+    "opciones": [
+      "Smishing",
+      "Vishing",
+      "Whaling",
+      "Typosquatting"
+    ],
+    "correcta": 2,
+    "explicacion": "Phishing dirigido específicamente a altos directivos es whaling (una forma de spear phishing). Smishing es por SMS y vishing por voz; typosquatting se refiere a dominios mal escritos."
+  },
+  {
+    "id": "D2-015",
+    "dominio": 2,
+    "objetivo": "2.2",
+    "enunciado": "Un proveedor real de la empresa tiene su cuenta de correo comprometida. Desde ella, el atacante envía una factura legítima con un número de cuenta bancaria cambiado. ¿Qué ataque es?",
+    "opciones": [
+      "Compromiso de correo empresarial (BEC)",
+      "Typosquatting",
+      "Watering hole",
+      "Desinformación (disinformation)"
+    ],
+    "correcta": 0,
+    "explicacion": "Usar una cuenta de correo legítima comprometida para fraude financiero es BEC. Typosquatting usaría un dominio falso; watering hole un sitio web; la desinformación busca difundir información falsa, no un pago."
+  },
+  {
+    "id": "D2-016",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Una aplicación comprueba que un usuario tiene permiso sobre un archivo y, milisegundos después, lo abre. Un atacante sustituye el archivo por un enlace simbólico entre ambas acciones. ¿Qué vulnerabilidad explota?",
+    "opciones": [
+      "Desbordamiento de búfer (buffer overflow)",
+      "Inyección SQL",
+      "Escape de máquina virtual (VM escape)",
+      "Condición de carrera TOCTOU (time-of-check to time-of-use)"
+    ],
+    "correcta": 3,
+    "explicacion": "El cambio entre la comprobación y el uso es una condición de carrera TOCTOU. Un buffer overflow escribe más allá de un búfer; la inyección SQL manipula consultas; el VM escape sale de una máquina virtual."
+  },
+  {
+    "id": "D2-017",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un atacante envía a un programa una entrada mucho más larga de lo esperado, sobrescribe memoria adyacente y consigue ejecutar su propio código. ¿Qué vulnerabilidad es?",
+    "opciones": [
+      "Condición de carrera (race condition)",
+      "Cross-site scripting (XSS)",
+      "Configuración errónea en la nube",
+      "Desbordamiento de búfer (buffer overflow)"
+    ],
+    "correcta": 3,
+    "explicacion": "Escribir más datos de los que caben en un búfer y sobrescribir memoria es un buffer overflow. La condición de carrera depende del tiempo; XSS inyecta scripts en webs; la configuración errónea en la nube es un fallo de ajustes."
+  },
+  {
+    "id": "D2-018",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un atacante con acceso a una máquina virtual consigue ejecutar código en el hipervisor y acceder a otras máquinas virtuales del mismo host. ¿Qué vulnerabilidad aprovecha?",
+    "opciones": [
+      "Escape de máquina virtual (VM escape)",
+      "Carga lateral (side loading)",
+      "Typosquatting",
+      "Inyección en memoria (memory injection)"
+    ],
+    "correcta": 0,
+    "explicacion": "Salir de la VM hacia el hipervisor es un VM escape. La carga lateral instala apps fuera de la tienda oficial; typosquatting usa dominios; la inyección en memoria es otra técnica de aplicación pero no describe salir del aislamiento de la VM."
+  },
+  {
+    "id": "D2-019",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un empleado instala en su móvil corporativo una aplicación descargada desde un sitio web, fuera de la tienda oficial. ¿Qué vulnerabilidad móvil describe?",
+    "opciones": [
+      "Jailbreak",
+      "Carga lateral (side loading)",
+      "VM escape",
+      "Día cero (zero-day)"
+    ],
+    "correcta": 1,
+    "explicacion": "Instalar apps desde fuentes no oficiales es side loading. El jailbreak elimina las restricciones del sistema operativo; VM escape afecta a la virtualización; un día cero es una vulnerabilidad sin parche."
+  },
+  {
+    "id": "D2-020",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un bucket de almacenamiento en la nube con copias de seguridad de clientes es accesible públicamente porque se dejó con permisos de lectura para «todos». ¿Qué tipo de vulnerabilidad es?",
+    "opciones": [
+      "Configuración errónea (misconfiguration) en la nube",
+      "Desbordamiento de búfer",
+      "Vulnerabilidad de firmware",
+      "Condición de carrera"
+    ],
+    "correcta": 0,
+    "explicacion": "Permisos excesivos en un recurso cloud son una configuración errónea, una de las causas más comunes de fugas. No hay fallo de memoria, firmware ni de concurrencia."
+  },
+  {
+    "id": "D2-021",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Se publica un exploit para una vulnerabilidad que el fabricante desconocía y para la que no existe parche. ¿Cómo se denomina?",
+    "opciones": [
+      "Vulnerabilidad de fin de vida (end-of-life)",
+      "Configuración errónea",
+      "Vulnerabilidad de día cero (zero-day)",
+      "Vulnerabilidad heredada (legacy)"
+    ],
+    "correcta": 2,
+    "explicacion": "Una vulnerabilidad sin parche disponible y desconocida previamente es de día cero. Fin de vida significa que el producto ya no recibe parches; configuración errónea es un fallo de ajustes; legacy se refiere a sistemas antiguos."
+  },
+  {
+    "id": "D2-022",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un fabricante de software es comprometido y los atacantes insertan código malicioso en la actualización oficial firmada que reciben miles de clientes. ¿Cómo se clasifica?",
+    "opciones": [
+      "Carga lateral (side loading)",
+      "Actualización maliciosa (malicious update) / riesgo de cadena de suministro de software",
+      "Typosquatting",
+      "Inyección SQL"
+    ],
+    "correcta": 1,
+    "explicacion": "Una actualización legítima con código malicioso es un caso de malicious update en la cadena de suministro. No es side loading (fuente no oficial), ni typosquatting, ni una inyección SQL."
+  },
+  {
+    "id": "D2-023",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Una fábrica usa un sistema de control que funciona sobre un sistema operativo que el fabricante dejó de soportar hace tres años. ¿Qué tipo de vulnerabilidad representa?",
+    "opciones": [
+      "Fin de vida (end-of-life) / sistema heredado",
+      "Día cero (zero-day)",
+      "Condición de carrera",
+      "Side loading"
+    ],
+    "correcta": 0,
+    "explicacion": "Sin soporte del fabricante no hay parches: vulnerabilidad de fin de vida/legacy. Un día cero es un fallo aún no conocido; las otras opciones son fallos de aplicación y móviles."
+  },
+  {
+    "id": "D2-024",
+    "dominio": 2,
+    "objetivo": "2.3",
+    "enunciado": "Un servidor web usa TLS 1.0 con suites de cifrado basadas en RC4. ¿Qué tipo de vulnerabilidad es?",
+    "opciones": [
+      "Escape de máquina virtual",
+      "Carga lateral",
+      "Desbordamiento de búfer",
+      "Criptográfica (algoritmos o protocolos débiles)"
+    ],
+    "correcta": 3,
+    "explicacion": "Protocolos y algoritmos obsoletos son vulnerabilidades criptográficas que permiten ataques de degradación o descifrado. Las otras opciones son de virtualización, móvil y memoria."
+  },
+  {
+    "id": "D2-025",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Varios servidores muestran archivos con extensión «.locked» y en cada carpeta aparece un archivo «LEEME.txt» con instrucciones de pago. ¿Qué malware es?",
+    "opciones": [
+      "Spyware",
+      "Ransomware",
+      "Keylogger",
+      "Bloatware"
+    ],
+    "correcta": 1,
+    "explicacion": "Archivos cifrados con nueva extensión y nota de rescate son indicadores de ransomware. El spyware espía sin avisar, el keylogger registra teclas y el bloatware es software innecesario preinstalado."
+  },
+  {
+    "id": "D2-026",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un malware se propaga automáticamente entre cientos de equipos explotando una vulnerabilidad de SMB, sin que ningún usuario abra archivos. ¿Qué tipo de malware es?",
+    "opciones": [
+      "Gusano (worm)",
+      "Virus",
+      "Troyano (trojan)",
+      "Bomba lógica (logic bomb)"
+    ],
+    "correcta": 0,
+    "explicacion": "La autopropagación sin intervención del usuario define a un gusano. El virus necesita que el usuario ejecute algo; el troyano se disfraza de software legítimo; la bomba lógica espera una condición."
+  },
+  {
+    "id": "D2-027",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un programador incluye código que borrará la base de datos de nóminas si su nombre deja de aparecer en la lista de empleados. ¿Qué es?",
+    "opciones": [
+      "Bomba lógica (logic bomb)",
+      "Gusano (worm)",
+      "Rootkit",
+      "RAT"
+    ],
+    "correcta": 0,
+    "explicacion": "Código que se activa ante una condición concreta es una bomba lógica. El gusano se propaga solo, el rootkit se oculta en el sistema y el RAT da acceso remoto."
+  },
+  {
+    "id": "D2-028",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un usuario descarga un «optimizador de PC gratis» que funciona, pero además abre una conexión remota permanente con un servidor del atacante. ¿Qué describe mejor este malware?",
+    "opciones": [
+      "Gusano (worm)",
+      "Troyano de acceso remoto (RAT)",
+      "Bomba lógica",
+      "Ransomware"
+    ],
+    "correcta": 1,
+    "explicacion": "Software aparentemente legítimo que da control remoto al atacante es un RAT (un tipo de troyano). No se autopropaga (gusano), no espera una condición (bomba lógica) ni cifra datos (ransomware)."
+  },
+  {
+    "id": "D2-029",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "El EDR detecta un ataque que se ejecuta íntegramente en memoria usando PowerShell y WMI, sin dejar ejecutables en el disco. ¿Qué tipo de malware es?",
+    "opciones": [
+      "Bloatware",
+      "Virus de macro",
+      "Malware sin archivos (fileless)",
+      "Keylogger físico"
+    ],
+    "correcta": 2,
+    "explicacion": "Ejecutarse en memoria con herramientas legítimas del sistema es característico del malware fileless. El bloatware es software innecesario; un virus de macro vive en documentos; un keylogger físico es un dispositivo de hardware."
+  },
+  {
+    "id": "D2-030",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "El SIEM registra en una hora intentos de inicio de sesión fallidos contra 3 000 cuentas distintas usando solo las contraseñas «Verano2026!» y «Empresa123». No se ha bloqueado ninguna cuenta. ¿Qué ataque es?",
+    "opciones": [
+      "Fuerza bruta (brute force)",
+      "Ataque de cumpleaños (birthday attack)",
+      "Repetición (replay)",
+      "Rociado de contraseñas (password spraying)"
+    ],
+    "correcta": 3,
+    "explicacion": "Pocas contraseñas comunes contra muchas cuentas, evitando los bloqueos, es password spraying. La fuerza bruta prueba muchas contraseñas contra una cuenta; el ataque de cumpleaños busca colisiones de hash; el replay reutiliza tráfico capturado."
+  },
+  {
+    "id": "D2-031",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un usuario inicia sesión en el correo corporativo desde Madrid y, 12 minutos después, desde Singapur. ¿Qué indicador de actividad maliciosa es?",
+    "opciones": [
+      "Viaje imposible (impossible travel)",
+      "Bloqueo de cuenta (account lockout)",
+      "Registros desaparecidos (missing logs)",
+      "Consumo de recursos (resource consumption)"
+    ],
+    "correcta": 0,
+    "explicacion": "Dos accesos desde ubicaciones físicamente incompatibles en poco tiempo son viaje imposible, indicio de credenciales robadas. No hay bloqueos, logs ausentes ni consumo anómalo de recursos."
+  },
+  {
+    "id": "D2-032",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "En los logs de un servidor web aparece la petición «GET /descargas?archivo=../../../../etc/passwd». ¿Qué ataque se intentó?",
+    "opciones": [
+      "Cross-site scripting (XSS)",
+      "Inyección SQL",
+      "Recorrido de directorios (directory traversal)",
+      "Falsificación de petición (CSRF)"
+    ],
+    "correcta": 2,
+    "explicacion": "La secuencia «../» para salir del directorio permitido es directory traversal. XSS usaría etiquetas <script>, SQLi usaría sintaxis SQL como ' OR 1=1 y CSRF fuerza peticiones desde la sesión de la víctima."
+  },
+  {
+    "id": "D2-033",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un formulario de login recibe como usuario el valor «admin' OR '1'='1' --». ¿Qué ataque es?",
+    "opciones": [
+      "Inyección SQL (SQL injection)",
+      "Directory traversal",
+      "Desbordamiento de búfer",
+      "Ataque de degradación (downgrade)"
+    ],
+    "correcta": 0,
+    "explicacion": "Las comillas y la condición siempre verdadera manipulan la consulta SQL. No hay rutas «../», no se desborda memoria y no se fuerza un protocolo más débil."
+  },
+  {
+    "id": "D2-034",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un atacante en la misma red Wi-Fi pública intercepta y modifica el tráfico entre un cliente y su banco. ¿Qué tipo de ataque es?",
+    "opciones": [
+      "Ataque de amplificación DNS",
+      "Rociado de contraseñas",
+      "Bomba lógica",
+      "Ataque en ruta (on-path)"
+    ],
+    "correcta": 3,
+    "explicacion": "Situarse entre las dos partes para interceptar o modificar el tráfico es un ataque on-path (antes MITM). La amplificación DNS es DDoS; el spraying ataca contraseñas; la bomba lógica es malware condicional."
+  },
+  {
+    "id": "D2-035",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un atacante envía pequeñas consultas DNS con la IP de origen falsificada de la víctima a muchos resolvers abiertos, que responden con paquetes mucho mayores hacia la víctima. ¿Qué ataque es?",
+    "opciones": [
+      "DDoS amplificado/reflejado (amplified/reflected)",
+      "Envenenamiento de caché ARP",
+      "Directory traversal",
+      "Ataque de colisión"
+    ],
+    "correcta": 0,
+    "explicacion": "Usar servidores de terceros que responden con más datos hacia la IP falsificada es un DDoS de amplificación/reflejo. ARP poisoning afecta a la red local; directory traversal es web; la colisión es criptográfica."
+  },
+  {
+    "id": "D2-036",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Durante una conexión, un atacante manipula la negociación para que cliente y servidor usen SSL 3.0 en lugar de TLS 1.3. ¿Qué ataque es?",
+    "opciones": [
+      "Ataque de cumpleaños (birthday)",
+      "Repetición de credenciales (credential replay)",
+      "Rociado de contraseñas",
+      "Ataque de degradación (downgrade)"
+    ],
+    "correcta": 3,
+    "explicacion": "Forzar una versión de protocolo más débil es un downgrade attack. El ataque de cumpleaños busca colisiones de hash; el replay reutiliza credenciales capturadas; el spraying prueba contraseñas."
+  },
+  {
+    "id": "D2-037",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un atacante captura el hash NTLM de un administrador y lo usa directamente para autenticarse en otros servidores sin conocer la contraseña. ¿Qué tipo de ataque es?",
+    "opciones": [
+      "Fuerza bruta",
+      "Repetición de credenciales (credential replay / pass-the-hash)",
+      "Ataque de cumpleaños",
+      "Typosquatting"
+    ],
+    "correcta": 1,
+    "explicacion": "Reutilizar un hash capturado para autenticarse es credential replay (pass-the-hash). No se prueba ninguna contraseña (fuerza bruta), no se buscan colisiones y no intervienen dominios."
+  },
+  {
+    "id": "D2-038",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Un ladrón usa un lector oculto para copiar la tarjeta de proximidad de un empleado en la cafetería y luego entra en el edificio con una copia. ¿Qué ataque es?",
+    "opciones": [
+      "Evil twin",
+      "Bluesnarfing",
+      "Clonación RFID (RFID cloning)",
+      "Watering hole"
+    ],
+    "correcta": 2,
+    "explicacion": "Copiar una tarjeta de proximidad es clonación RFID, un ataque físico. Evil twin es un punto de acceso Wi-Fi falso, bluesnarfing roba datos por Bluetooth y watering hole infecta sitios web."
+  },
+  {
+    "id": "D2-039",
+    "dominio": 2,
+    "objetivo": "2.4",
+    "enunciado": "Tras un incidente, el analista descubre que los registros de seguridad del servidor tienen un hueco de 3 horas justo cuando ocurrió el acceso sospechoso. ¿Qué indicador es?",
+    "opciones": [
+      "Viaje imposible",
+      "Bloqueo de cuenta",
+      "Registros desaparecidos (missing logs)",
+      "Contenido publicado (published content)"
+    ],
+    "correcta": 2,
+    "explicacion": "Huecos en los logs suelen indicar que el atacante los borró para ocultar su actividad. El viaje imposible es geográfico, el bloqueo de cuenta se produce por intentos fallidos y el contenido publicado se refiere a datos filtrados."
+  },
+  {
+    "id": "D2-040",
+    "dominio": 2,
+    "objetivo": "2.5",
+    "enunciado": "Una empresa quiere asegurarse de que en los puestos de contabilidad solo se ejecuten las cinco aplicaciones aprobadas. ¿Qué técnica de mitigación es la más adecuada?",
+    "opciones": [
+      "Lista de bloqueo de aplicaciones (deny list)",
+      "Segmentación de red",
+      "Lista de aplicaciones permitidas (application allow list)",
+      "Honeypot"
+    ],
+    "correcta": 2,
+    "explicacion": "Una allow list solo permite lo aprobado y bloquea todo lo demás, incluido malware desconocido. Una deny list solo bloquea lo que ya se conoce como malo; la segmentación limita la red, no las aplicaciones; un honeypot es un señuelo."
+  },
+  {
+    "id": "D2-041",
+    "dominio": 2,
+    "objetivo": "2.5",
+    "enunciado": "Un EDR detecta ransomware activo en un portátil. ¿Cuál es la primera mitigación más adecuada para evitar la propagación?",
+    "opciones": [
+      "Aplicar la última actualización del navegador",
+      "Cambiar la política de contraseñas",
+      "Desmantelar (decommission) todos los servidores",
+      "Aislar (isolation) el equipo de la red"
+    ],
+    "correcta": 3,
+    "explicacion": "Aislar el equipo comprometido contiene el incidente y evita la propagación. Actualizar el navegador o la política de contraseñas no detiene el ransomware activo, y desmantelar todos los servidores es desproporcionado."
+  },
+  {
+    "id": "D2-042",
+    "dominio": 2,
+    "objetivo": "2.5",
+    "enunciado": "Tras una auditoría se detecta que todos los empleados tienen permisos de administrador local en sus equipos. ¿Qué principio de mitigación debe aplicarse?",
+    "opciones": [
+      "Fail-open",
+      "Desmantelamiento (decommissioning)",
+      "Seguridad por oscuridad",
+      "Mínimo privilegio (least privilege)"
+    ],
+    "correcta": 3,
+    "explicacion": "Conceder solo los permisos necesarios es el principio de mínimo privilegio. Fail-open es un modo de fallo, el desmantelamiento retira activos y la seguridad por oscuridad no es una mitigación válida."
+  },
+  {
+    "id": "D2-043",
+    "dominio": 2,
+    "objetivo": "2.5",
+    "enunciado": "Un equipo de seguridad quiere limitar el movimiento lateral entre la red de los cajeros, la red de oficinas y la red de invitados. ¿Qué técnica es la más adecuada?",
+    "opciones": [
+      "Segmentación de red (VLAN y reglas de firewall entre segmentos)",
+      "Cifrado de disco completo",
+      "Deshabilitar el Bluetooth",
+      "Hashing de contraseñas"
+    ],
+    "correcta": 0,
+    "explicacion": "Separar la red en segmentos con controles entre ellos limita el movimiento lateral. El cifrado de disco protege datos en reposo; deshabilitar Bluetooth y hashear contraseñas no separan redes."
+  },
+  {
+    "id": "D2-044",
+    "dominio": 2,
+    "objetivo": "2.5",
+    "enunciado": "Un servidor recién instalado tiene activos servicios como Telnet, FTP y un servidor de impresión que no se usan. ¿Qué técnica de bastionado (hardening) se debe aplicar?",
+    "opciones": [
+      "Instalar un honeypot en el servidor",
+      "Deshabilitar puertos, protocolos y servicios innecesarios",
+      "Activar fail-open en el firewall",
+      "Aumentar el tamaño del disco"
+    ],
+    "correcta": 1,
+    "explicacion": "Reducir la superficie de ataque deshabilitando servicios no usados es una técnica básica de hardening. Un honeypot en un servidor de producción no tiene sentido, fail-open reduce la seguridad y el tamaño del disco es irrelevante."
   }
 ]
