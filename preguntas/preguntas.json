@@ -2238,5 +2238,565 @@
     ],
     "correcta": 1,
     "explicacion": "Los escaneos previos muestran qué estaba expuesto y ayudan a deducir el vector de entrada. Las demás fuentes no informan sobre vulnerabilidades."
+  },
+  {
+    "id": "D5-001",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "Un documento de la empresa dice: «Todas las contraseñas deben tener al menos 14 caracteres y renovarse ante cualquier sospecha de compromiso». ¿Qué tipo de documento de gobernanza es?",
+    "opciones": [
+      "Estándar (standard)",
+      "Guía (guideline)",
+      "Política (policy)",
+      "Procedimiento (procedure)"
+    ],
+    "correcta": 0,
+    "explicacion": "Un estándar fija requisitos concretos y obligatorios. La política es una declaración de alto nivel; la guía es una recomendación no obligatoria; el procedimiento describe pasos detallados."
+  },
+  {
+    "id": "D5-002",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "Un documento recomienda, sin obligar, usar gestores de contraseñas y frases largas fáciles de recordar. ¿Qué tipo de documento es?",
+    "opciones": [
+      "Guía (guideline)",
+      "Estándar (standard)",
+      "Política (policy)",
+      "Procedimiento (procedure)"
+    ],
+    "correcta": 0,
+    "explicacion": "Las guías son recomendaciones no obligatorias. Estándares, políticas y procedimientos son de obligado cumplimiento."
+  },
+  {
+    "id": "D5-003",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "Un documento explica paso a paso cómo dar de baja a un empleado: deshabilitar la cuenta, recoger el portátil, revocar tarjetas y transferir archivos. ¿Qué es?",
+    "opciones": [
+      "Procedimiento (procedure) de salida (offboarding)",
+      "Política de uso aceptable",
+      "Guía de contraseñas",
+      "Acuerdo de nivel de servicio"
+    ],
+    "correcta": 0,
+    "explicacion": "Los pasos detallados para una tarea forman un procedimiento. La AUP regula el uso de recursos; una guía recomienda; un SLA define niveles de servicio con un proveedor."
+  },
+  {
+    "id": "D5-004",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "Los empleados firman al incorporarse un documento que establece qué pueden y qué no pueden hacer con el correo, internet y los equipos corporativos. ¿Qué documento es?",
+    "opciones": [
+      "Plan de recuperación ante desastres",
+      "Política de uso aceptable (AUP)",
+      "Acuerdo de confidencialidad con proveedores",
+      "Procedimiento de gestión de cambios"
+    ],
+    "correcta": 1,
+    "explicacion": "La AUP define el uso permitido de los recursos y suele firmarse al incorporarse. Las demás opciones cubren recuperación, proveedores o cambios, no el uso diario de los recursos."
+  },
+  {
+    "id": "D5-005",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "Según el RGPD, una empresa decide qué datos personales de clientes recoger y con qué fin, y contrata a una empresa de nóminas para procesarlos siguiendo sus instrucciones. ¿Qué papel tiene la empresa de nóminas?",
+    "opciones": [
+      "Encargado del tratamiento (processor)",
+      "Responsable del tratamiento (controller)",
+      "Sujeto de los datos (data subject)",
+      "Propietario de los datos (data owner)"
+    ],
+    "correcta": 0,
+    "explicacion": "El encargado trata datos por cuenta del responsable y según sus instrucciones. El responsable decide el fin y los medios; el sujeto es la persona a quien se refieren los datos; el propietario es un rol interno de la organización."
+  },
+  {
+    "id": "D5-006",
+    "dominio": 5,
+    "objetivo": "5.1",
+    "enunciado": "En una organización, el administrador de bases de datos realiza las copias, aplica el cifrado y gestiona los permisos técnicos de los datos de clientes según lo que decide el director comercial. ¿Qué rol tiene el administrador?",
+    "opciones": [
+      "Propietario de datos (data owner)",
+      "Custodio de datos (data custodian)",
+      "Responsable del tratamiento (controller)",
+      "Sujeto de los datos"
+    ],
+    "correcta": 1,
+    "explicacion": "El custodio aplica los controles técnicos; el propietario (aquí el director comercial) decide clasificación y acceso. El controller decide fines del tratamiento; el sujeto es la persona titular de los datos."
+  },
+  {
+    "id": "D5-007",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Un servidor vale 40 000 €. Un incendio destruiría el 25 % de su valor. Se estima que ocurre un incendio cada 20 años. ¿Cuál es la ALE?",
+    "opciones": [
+      "500 €",
+      "10 000 €",
+      "2 000 €",
+      "800 €"
+    ],
+    "correcta": 0,
+    "explicacion": "SLE = AV × EF = 40 000 × 0,25 = 10 000 €. ARO = 1/20 = 0,05. ALE = SLE × ARO = 10 000 × 0,05 = 500 €. 10 000 € es la SLE; los otros valores proceden de cálculos incorrectos."
+  },
+  {
+    "id": "D5-008",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Una empresa contrata un seguro de ciberriesgos para cubrir posibles pérdidas por ransomware. ¿Qué estrategia de gestión del riesgo aplica?",
+    "opciones": [
+      "Mitigar (mitigate)",
+      "Evitar (avoid)",
+      "Transferir (transfer)",
+      "Aceptar (accept)"
+    ],
+    "correcta": 2,
+    "explicacion": "El seguro transfiere el impacto económico a un tercero. Mitigar sería aplicar controles; evitar, dejar la actividad; aceptar, asumir el riesgo sin actuar."
+  },
+  {
+    "id": "D5-009",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Una empresa decide dejar de almacenar números de tarjeta y usar un proveedor de pagos externo, eliminando así ese riesgo de sus sistemas. ¿Qué estrategia aplica?",
+    "opciones": [
+      "Aceptar (accept)",
+      "Transferir con un seguro",
+      "Ignorar el riesgo",
+      "Evitar (avoid)"
+    ],
+    "correcta": 3,
+    "explicacion": "Dejar de realizar la actividad que genera el riesgo es evitarlo. Aceptar sería mantenerlo; transferir con seguro conservaría la actividad; ignorar no es una estrategia válida."
+  },
+  {
+    "id": "D5-010",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Una vulnerabilidad de bajo impacto costaría 50 000 € corregirla, mientras que la pérdida anual estimada es de 300 €. La dirección decide documentarla y no hacer nada más. ¿Qué estrategia es?",
+    "opciones": [
+      "Mitigar",
+      "Transferir",
+      "Evitar",
+      "Aceptar (accept)"
+    ],
+    "correcta": 3,
+    "explicacion": "Si el coste del control supera ampliamente el impacto, se acepta el riesgo de forma documentada. No se aplican controles (mitigar), ni seguro (transferir), ni se abandona la actividad (evitar)."
+  },
+  {
+    "id": "D5-011",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Una tienda online determina que puede perder como máximo 15 minutos de pedidos en caso de desastre. ¿Qué métrica ha definido?",
+    "opciones": [
+      "RTO (Recovery Time Objective)",
+      "MTBF (Mean Time Between Failures)",
+      "MTTR (Mean Time To Repair)",
+      "RPO (Recovery Point Objective)"
+    ],
+    "correcta": 3,
+    "explicacion": "El RPO define la pérdida máxima de datos aceptable, medida en tiempo, y determina la frecuencia de copias. El RTO es el tiempo para restaurar el servicio; MTBF y MTTR miden fiabilidad y reparación."
+  },
+  {
+    "id": "D5-012",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "La dirección establece que el sistema de reservas debe volver a estar operativo como máximo 2 horas después de una interrupción. ¿Qué métrica es?",
+    "opciones": [
+      "RPO (Recovery Point Objective)",
+      "ALE (Annualized Loss Expectancy)",
+      "MTBF (Mean Time Between Failures)",
+      "RTO (Recovery Time Objective)"
+    ],
+    "correcta": 3,
+    "explicacion": "El RTO es el tiempo máximo aceptable para restaurar el servicio. El RPO trata de pérdida de datos; la ALE es pérdida económica anual; el MTBF mide fiabilidad."
+  },
+  {
+    "id": "D5-013",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Un fabricante indica que sus discos fallan de media cada 1,2 millones de horas de funcionamiento. ¿Qué métrica es?",
+    "opciones": [
+      "MTTR (Mean Time To Repair)",
+      "MTBF (Mean Time Between Failures)",
+      "RTO",
+      "RPO"
+    ],
+    "correcta": 1,
+    "explicacion": "El tiempo medio entre fallos (MTBF) mide la fiabilidad. El MTTR mide cuánto se tarda en reparar; RTO y RPO son objetivos de recuperación del negocio."
+  },
+  {
+    "id": "D5-014",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Tras aplicar un firewall, MFA y formación, aún queda cierta probabilidad de que un ataque tenga éxito. ¿Cómo se llama ese riesgo?",
+    "opciones": [
+      "Riesgo inherente (inherent risk)",
+      "Apetito de riesgo (risk appetite)",
+      "Riesgo residual (residual risk)",
+      "Indicador clave de riesgo (KRI)"
+    ],
+    "correcta": 2,
+    "explicacion": "El riesgo que queda tras aplicar controles es el residual. El inherente es el riesgo antes de los controles; el apetito es cuánto riesgo se está dispuesto a asumir; un KRI es una métrica de seguimiento."
+  },
+  {
+    "id": "D5-015",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Una empresa mantiene un documento con cada riesgo identificado, su probabilidad, impacto, propietario y controles planificados. ¿Cómo se llama?",
+    "opciones": [
+      "Acuerdo de nivel de servicio",
+      "Política de uso aceptable",
+      "Registro de riesgos (risk register)",
+      "Cadena de custodia"
+    ],
+    "correcta": 2,
+    "explicacion": "El registro de riesgos documenta riesgos, propietarios, valoraciones y respuestas. El SLA es un contrato de servicio; la AUP regula el uso de recursos; la cadena de custodia registra evidencias."
+  },
+  {
+    "id": "D5-016",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Un comité clasifica los riesgos como «alto», «medio» o «bajo» en una matriz de probabilidad e impacto, sin calcular valores monetarios. ¿Qué tipo de análisis es?",
+    "opciones": [
+      "Cuantitativo (quantitative)",
+      "Análisis forense",
+      "Análisis de brechas",
+      "Cualitativo (qualitative)"
+    ],
+    "correcta": 3,
+    "explicacion": "Usar categorías en lugar de cifras es análisis cualitativo. El cuantitativo usa valores numéricos (SLE, ALE); el forense investiga incidentes; el de brechas compara estados."
+  },
+  {
+    "id": "D5-017",
+    "dominio": 5,
+    "objetivo": "5.2",
+    "enunciado": "Si el SLE de un incidente es 8 000 € y ocurre 3 veces al año, ¿cuál es la ALE?",
+    "opciones": [
+      "2 667 €",
+      "8 000 €",
+      "24 000 €",
+      "11 000 €"
+    ],
+    "correcta": 2,
+    "explicacion": "ALE = SLE × ARO = 8 000 × 3 = 24 000 €. 2 667 € resulta de dividir en lugar de multiplicar; 8 000 € es el SLE; 11 000 € suma en lugar de multiplicar."
+  },
+  {
+    "id": "D5-018",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Antes de firmar con un proveedor de nube, una empresa quiere incluir en el contrato su derecho a revisar los controles de seguridad del proveedor. ¿Qué cláusula necesita?",
+    "opciones": [
+      "Acuerdo de confidencialidad (NDA)",
+      "Derecho a auditar (right-to-audit)",
+      "Memorando de entendimiento (MOU)",
+      "Política de uso aceptable"
+    ],
+    "correcta": 1,
+    "explicacion": "La cláusula de derecho a auditar permite verificar los controles del proveedor. El NDA protege información confidencial; el MOU es un acuerdo informal; la AUP es interna."
+  },
+  {
+    "id": "D5-019",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Un contrato con un proveedor de hosting garantiza un 99,95 % de disponibilidad mensual y compensaciones si no se cumple. ¿Qué documento es?",
+    "opciones": [
+      "Acuerdo de nivel de servicio (SLA)",
+      "Acuerdo de socios de negocio (BPA)",
+      "NDA",
+      "Declaración de trabajo (SOW)"
+    ],
+    "correcta": 0,
+    "explicacion": "El SLA define métricas de servicio medibles y penalizaciones. El BPA regula la relación entre socios; el NDA la confidencialidad; el SOW un trabajo concreto con entregables."
+  },
+  {
+    "id": "D5-020",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Una empresa firma un contrato marco con una consultora que fija las condiciones generales; después, para cada proyecto, firma un documento con el alcance, entregables y plazos concretos. ¿Qué documentos son, en ese orden?",
+    "opciones": [
+      "SLA y NDA",
+      "MOU y BPA",
+      "NDA y MSA",
+      "MSA y SOW"
+    ],
+    "correcta": 3,
+    "explicacion": "El MSA (Master Service Agreement) fija las condiciones generales y el SOW/WO cada trabajo concreto. SLA y NDA cubren niveles de servicio y confidencialidad; MOU y BPA son acuerdos de colaboración."
+  },
+  {
+    "id": "D5-021",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Antes de compartir sus planes de producto con un posible proveedor durante una negociación, una empresa quiere protegerse legalmente contra la divulgación. ¿Qué debe firmar?",
+    "opciones": [
+      "SLA",
+      "Acuerdo de confidencialidad (NDA)",
+      "Acuerdo de socios de negocio (BPA)",
+      "Procedimiento de offboarding"
+    ],
+    "correcta": 1,
+    "explicacion": "El NDA obliga a no divulgar la información confidencial. El SLA mide servicio; el BPA regula una sociedad de negocio; el offboarding es un proceso de RR. HH."
+  },
+  {
+    "id": "D5-022",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Antes de contratar a un proveedor crítico, la empresa revisa su situación financiera, sus certificaciones, incidentes previos y posibles conflictos de interés. ¿Qué proceso es?",
+    "opciones": [
+      "Diligencia debida (due diligence) en la selección de proveedores",
+      "Retención legal",
+      "Prueba de penetración física",
+      "Análisis de causa raíz"
+    ],
+    "correcta": 0,
+    "explicacion": "Investigar a un proveedor antes de contratarlo es diligencia debida. La retención legal conserva datos para litigios; el pentest físico prueba instalaciones; el análisis de causa raíz investiga incidentes."
+  },
+  {
+    "id": "D5-023",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Dos empresas forman una alianza para comercializar un producto conjunto y necesitan un acuerdo que defina reparto de beneficios, responsabilidades y obligaciones de seguridad. ¿Qué documento es el más adecuado?",
+    "opciones": [
+      "Acuerdo de socios de negocio (BPA)",
+      "SLA",
+      "NDA",
+      "Política de contraseñas"
+    ],
+    "correcta": 0,
+    "explicacion": "El BPA regula la relación entre socios, incluidos beneficios y responsabilidades. El SLA fija niveles de servicio; el NDA solo protege confidencialidad; la política de contraseñas es interna."
+  },
+  {
+    "id": "D5-024",
+    "dominio": 5,
+    "objetivo": "5.3",
+    "enunciado": "Una empresa envía anualmente a sus proveedores un cuestionario sobre sus controles de seguridad y revisa sus informes de auditoría independientes. ¿Qué actividad es?",
+    "opciones": [
+      "Threat hunting",
+      "Ejercicio de mesa",
+      "Monitorización continua de proveedores (vendor monitoring)",
+      "Aprovisionamiento de usuarios"
+    ],
+    "correcta": 2,
+    "explicacion": "Los cuestionarios y la revisión de auditorías forman parte de la monitorización de terceros. Las demás opciones son actividades técnicas internas."
+  },
+  {
+    "id": "D5-025",
+    "dominio": 5,
+    "objetivo": "5.4",
+    "enunciado": "Una empresa no cumple con la normativa de protección de datos tras una fuga. ¿Qué consecuencias puede sufrir?",
+    "opciones": [
+      "Ninguna si tenía antivirus",
+      "Solo una reducción del RTO",
+      "Multas, sanciones, daño reputacional y pérdida de licencias o contratos",
+      "Un aumento automático del MTBF"
+    ],
+    "correcta": 2,
+    "explicacion": "El incumplimiento puede acarrear multas, sanciones, daño reputacional y pérdida de licencias. Tener antivirus no exime; RTO y MTBF son métricas técnicas no relacionadas."
+  },
+  {
+    "id": "D5-026",
+    "dominio": 5,
+    "objetivo": "5.4",
+    "enunciado": "Un cliente europeo solicita que una empresa elimine todos sus datos personales porque ya no desea ser cliente. ¿Qué derecho ejerce?",
+    "opciones": [
+      "Derecho a auditar",
+      "Derecho al olvido (right to be forgotten)",
+      "Soberanía de datos",
+      "Retención legal"
+    ],
+    "correcta": 1,
+    "explicacion": "El RGPD reconoce el derecho de supresión o derecho al olvido. El derecho a auditar es contractual con proveedores; la soberanía depende de la ubicación; la retención legal obliga a conservar."
+  },
+  {
+    "id": "D5-027",
+    "dominio": 5,
+    "objetivo": "5.4",
+    "enunciado": "Cada año, los empleados confirman por escrito que han leído y aceptan las políticas de seguridad vigentes. ¿Qué concepto de cumplimiento es?",
+    "opciones": [
+      "Atestación y reconocimiento (attestation and acknowledgement)",
+      "Diligencia debida con proveedores",
+      "Análisis cuantitativo",
+      "Gestión de parches"
+    ],
+    "correcta": 0,
+    "explicacion": "Confirmar formalmente la lectura y aceptación de políticas es reconocimiento/atestación. La diligencia debida se aplica a terceros; el análisis cuantitativo y los parches son otros procesos."
+  },
+  {
+    "id": "D5-028",
+    "dominio": 5,
+    "objetivo": "5.4",
+    "enunciado": "La persona cuyos datos personales trata una organización se denomina...",
+    "opciones": [
+      "Encargado del tratamiento (processor)",
+      "Custodio de datos",
+      "Sujeto de los datos (data subject)",
+      "Responsable del tratamiento (controller)"
+    ],
+    "correcta": 2,
+    "explicacion": "El sujeto de los datos es la persona identificada o identificable. El encargado trata datos por cuenta de otro; el custodio aplica controles; el responsable decide fines y medios."
+  },
+  {
+    "id": "D5-029",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Un auditor contratado por una empresa evalúa sus controles y emite un informe SOC 2 para que los clientes confíen en ella. ¿Qué tipo de evaluación es?",
+    "opciones": [
+      "Autoevaluación interna",
+      "Ejercicio de mesa",
+      "Bug bounty",
+      "Auditoría externa independiente"
+    ],
+    "correcta": 3,
+    "explicacion": "Un informe SOC 2 lo emite un auditor externo independiente. La autoevaluación la hace la propia empresa; el tabletop es un ejercicio de respuesta; el bug bounty busca fallos con recompensas."
+  },
+  {
+    "id": "D5-030",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Un pentester recibe diagramas de red, código fuente y credenciales antes de comenzar la prueba. ¿Qué tipo de entorno es?",
+    "opciones": [
+      "Entorno desconocido (unknown environment)",
+      "Entorno parcialmente conocido (partially known environment)",
+      "Reconocimiento pasivo",
+      "Entorno conocido (known environment)"
+    ],
+    "correcta": 3,
+    "explicacion": "Con toda la información disponible es un entorno conocido (antes white box). Desconocido es sin información (black box); parcialmente conocido, con información limitada (gray box); el reconocimiento pasivo es una técnica, no un tipo de entorno."
+  },
+  {
+    "id": "D5-031",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Un pentester solo recibe el nombre de la empresa y debe actuar como un atacante externo sin información previa. ¿Qué tipo de prueba es?",
+    "opciones": [
+      "Entorno conocido (known environment)",
+      "Entorno desconocido (unknown environment)",
+      "Entorno parcialmente conocido",
+      "Auditoría interna de cumplimiento"
+    ],
+    "correcta": 1,
+    "explicacion": "Sin información previa es un entorno desconocido (black box). Las otras opciones implican información parcial o total, o una auditoría que no es un pentest."
+  },
+  {
+    "id": "D5-032",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Durante un pentest, el equipo consulta LinkedIn, el registro WHOIS y las ofertas de empleo de la empresa sin enviar ningún paquete a sus sistemas. ¿Qué fase realiza?",
+    "opciones": [
+      "Reconocimiento activo (active reconnaissance)",
+      "Reconocimiento pasivo (passive reconnaissance)",
+      "Explotación",
+      "Escalada de privilegios"
+    ],
+    "correcta": 1,
+    "explicacion": "Recopilar información de fuentes abiertas sin interactuar con el objetivo es reconocimiento pasivo. El activo incluye escaneos directos; la explotación y la escalada vienen después."
+  },
+  {
+    "id": "D5-033",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Antes de comenzar un pentest, el cliente y el equipo de pruebas acuerdan el alcance, las IPs permitidas, el horario y los contactos de emergencia. ¿Qué documento es?",
+    "opciones": [
+      "Acuerdo de nivel de servicio",
+      "Política de uso aceptable",
+      "Reglas de compromiso (rules of engagement)",
+      "Registro de riesgos"
+    ],
+    "correcta": 2,
+    "explicacion": "Las reglas de compromiso delimitan qué, cuándo y cómo se puede probar. El SLA mide un servicio; la AUP regula a los empleados; el registro de riesgos documenta riesgos."
+  },
+  {
+    "id": "D5-034",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "En un ejercicio, un equipo ataca la red mientras el SOC defiende, y ambos comparten resultados en tiempo real para mejorar las detecciones. ¿Qué tipo de equipo describe la colaboración?",
+    "opciones": [
+      "Equipo rojo (red team) aislado",
+      "Equipo azul (blue team) aislado",
+      "Equipo púrpura (purple team)",
+      "Equipo blanco de auditoría financiera"
+    ],
+    "correcta": 2,
+    "explicacion": "El purple team integra ataque (red) y defensa (blue) colaborando. El red team solo ataca, el blue team solo defiende; un equipo de auditoría financiera no participa."
+  },
+  {
+    "id": "D5-035",
+    "dominio": 5,
+    "objetivo": "5.5",
+    "enunciado": "Un equipo intenta entrar en la sede de la empresa haciéndose pasar por técnicos de mantenimiento y siguiendo a empleados por las puertas. ¿Qué tipo de prueba es?",
+    "opciones": [
+      "Escaneo de vulnerabilidades",
+      "Prueba de penetración física",
+      "Revisión de código",
+      "Auditoría de cumplimiento documental"
+    ],
+    "correcta": 1,
+    "explicacion": "Probar el acceso a instalaciones es una prueba de penetración física. Escanear, revisar código o auditar documentos no evalúan la seguridad física."
+  },
+  {
+    "id": "D5-036",
+    "dominio": 5,
+    "objetivo": "5.6",
+    "enunciado": "En una simulación de phishing, el 22 % de los empleados hace clic. ¿Cuál es la respuesta más eficaz del programa de concienciación?",
+    "opciones": [
+      "Ofrecer formación específica a quienes hicieron clic y repetir simulaciones periódicas midiendo la evolución",
+      "Despedir a todos los que hicieron clic",
+      "Dejar de hacer simulaciones porque molestan",
+      "Bloquear el correo electrónico de toda la empresa"
+    ],
+    "correcta": 0,
+    "explicacion": "Un programa eficaz forma, repite y mide. Despedir genera miedo y oculta incidentes; dejar las simulaciones elimina la medición; bloquear el correo no es viable."
+  },
+  {
+    "id": "D5-037",
+    "dominio": 5,
+    "objetivo": "5.6",
+    "enunciado": "Un empleado recibe un correo sospechoso que pide verificar su contraseña. Según las buenas prácticas de concienciación, ¿qué debe hacer?",
+    "opciones": [
+      "Responder al remitente preguntando si es legítimo",
+      "Reenviarlo a todos sus compañeros como advertencia",
+      "Hacer clic para comprobar si la web es real",
+      "Reportarlo mediante el botón o canal de reporte de phishing sin hacer clic"
+    ],
+    "correcta": 3,
+    "explicacion": "Reportarlo por el canal oficial permite al equipo de seguridad analizarlo y actuar. Responder o hacer clic expone al usuario; reenviarlo a todos propaga el riesgo."
+  },
+  {
+    "id": "D5-038",
+    "dominio": 5,
+    "objetivo": "5.6",
+    "enunciado": "Un empleado ve que alguien sin tarjeta le sigue de cerca para entrar por la puerta de seguridad. ¿Qué tema de formación aplica a esta situación?",
+    "opciones": [
+      "Gestión de parches",
+      "Conciencia situacional y acceso a remolque (tailgating)",
+      "Configuración de RAID",
+      "Análisis de vulnerabilidades"
+    ],
+    "correcta": 1,
+    "explicacion": "Reconocer y frenar el tailgating forma parte de la conciencia situacional y la seguridad física. Las demás opciones son temas técnicos ajenos al comportamiento del usuario."
+  },
+  {
+    "id": "D5-039",
+    "dominio": 5,
+    "objetivo": "5.6",
+    "enunciado": "Una empresa que adopta el teletrabajo quiere actualizar su formación. ¿Qué tema es especialmente relevante?",
+    "opciones": [
+      "Configuración de bolardos en el aparcamiento",
+      "Cálculo de MTBF de discos",
+      "Gestión de certificados de la CA raíz",
+      "Seguridad en entornos remotos e híbridos: Wi-Fi doméstica, VPN, privacidad de pantalla"
+    ],
+    "correcta": 3,
+    "explicacion": "El teletrabajo introduce riesgos de redes domésticas, espacios compartidos y acceso remoto. Bolardos, MTBF y gestión de la CA no son temas de formación del usuario remoto."
+  },
+  {
+    "id": "D5-040",
+    "dominio": 5,
+    "objetivo": "5.6",
+    "enunciado": "Un empleado nota que un compañero copia grandes cantidades de datos de clientes a un USB personal fuera de su horario habitual. ¿Qué debe saber reconocer gracias a la formación?",
+    "opciones": [
+      "Un procedimiento normal de copia de seguridad",
+      "Una prueba de penetración autorizada",
+      "Comportamiento anómalo o de riesgo que debe reportarse (posible amenaza interna)",
+      "Un cambio aprobado por el CAB"
+    ],
+    "correcta": 2,
+    "explicacion": "La formación enseña a reconocer comportamientos inesperados o de riesgo y a reportarlos, como posibles amenazas internas. No es un procedimiento normal ni hay indicios de prueba o cambio autorizados."
   }
 ]
