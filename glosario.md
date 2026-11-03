@@ -153,7 +153,7 @@
 | RTOS (Real-Time Operating System) | Sistema operativo en tiempo real | 3 |
 | Rules of engagement | Reglas acordadas que delimitan una prueba de penetración | 5 |
 | SaaS (Software as a Service) | Nube que ofrece aplicaciones completas | 3 |
-| SAE (Simultaneous Authentication of Equals) | Intercambio de claves de WPA3 que sustituye a PSK | 4 |
+| SAE (Simultaneous Authentication of Equals) | Intercambio de claves de WPA3-Personal; reemplaza el handshake PSK de WPA2 y resiste ataques de diccionario offline | 4 |
 | Salt (sal) | Valor aleatorio añadido antes de hashear una contraseña | 1 |
 | SAML (Security Assertion Markup Language) | Estándar XML para SSO federado | 4 |
 | Sandboxing | Ejecución aislada de código no confiable | 4 |
