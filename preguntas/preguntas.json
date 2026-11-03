@@ -950,5 +950,509 @@
     ],
     "correcta": 1,
     "explicacion": "Reducir la superficie de ataque deshabilitando servicios no usados es una técnica básica de hardening. Un honeypot en un servidor de producción no tiene sentido, fail-open reduce la seguridad y el tamaño del disco es irrelevante."
+  },
+  {
+    "id": "D3-001",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Una empresa usa un CRM en modalidad SaaS. Se produce una fuga porque un empleado compartió su contraseña y no había MFA activado. Según el modelo de responsabilidad compartida, ¿quién era responsable de ese control?",
+    "opciones": [
+      "El proveedor SaaS, porque gestiona toda la aplicación",
+      "El cliente, porque la gestión de identidades y accesos es suya",
+      "El proveedor del centro de datos físico",
+      "Nadie, porque en SaaS no hay responsabilidad compartida"
+    ],
+    "correcta": 1,
+    "explicacion": "En todos los modelos (incluido SaaS) los datos y la gestión de accesos de los usuarios son responsabilidad del cliente. El proveedor gestiona la aplicación y la infraestructura, pero no decide quién accede ni cómo protege sus credenciales."
+  },
+  {
+    "id": "D3-002",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Un equipo DevOps define sus servidores, redes y reglas de firewall en archivos de plantilla versionados en Git que se despliegan automáticamente. ¿Qué concepto describe?",
+    "opciones": [
+      "Arquitectura sin servidor (serverless)",
+      "Infraestructura como código (IaC)",
+      "Red definida por software (SDN)",
+      "Air gap"
+    ],
+    "correcta": 1,
+    "explicacion": "Definir la infraestructura en código versionado es IaC: repetible y auditable, aunque un error se replica en todos los despliegues. Serverless delega la infraestructura al proveedor; SDN separa planos de red; air gap es aislamiento físico."
+  },
+  {
+    "id": "D3-003",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Una central eléctrica mantiene su red de control totalmente desconectada de cualquier otra red. ¿Cuál es el principal vector de riesgo que persiste?",
+    "opciones": [
+      "Ataques DDoS desde internet",
+      "Medios extraíbles como USB usados para transferir datos o actualizaciones",
+      "Phishing por correo dirigido a los PLC",
+      "Vulnerabilidades en el proveedor SaaS"
+    ],
+    "correcta": 1,
+    "explicacion": "En una red aislada físicamente (air-gapped) el riesgo principal son los medios extraíbles que cruzan el aislamiento. Al no tener conexión, no hay DDoS desde internet, correo ni dependencia de SaaS."
+  },
+  {
+    "id": "D3-004",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "¿Cuál es la principal diferencia de seguridad entre contenedores y máquinas virtuales?",
+    "opciones": [
+      "Los contenedores tienen cada uno su propio kernel y hardware virtual",
+      "Las máquinas virtuales no pueden sufrir ningún tipo de escape",
+      "Los contenedores no pueden ejecutarse en la nube",
+      "Los contenedores comparten el kernel del sistema anfitrión, por lo que el aislamiento es menor que en una VM"
+    ],
+    "correcta": 3,
+    "explicacion": "Los contenedores comparten el kernel del host; una vulnerabilidad en él afecta a todos. Las VM tienen kernel propio sobre un hipervisor, aunque pueden sufrir VM escape. Los contenedores se usan ampliamente en la nube."
+  },
+  {
+    "id": "D3-005",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Una ciudad despliega miles de sensores IoT de tráfico con poca memoria y CPU. ¿Cuál es una preocupación de seguridad típica de estos dispositivos?",
+    "opciones": [
+      "Capacidad limitada para parches y cifrado fuerte, y credenciales por defecto",
+      "Exceso de potencia de cálculo que facilita la minería de criptomonedas",
+      "Imposibilidad de conectarse a internet",
+      "Que siempre ejecutan un sistema operativo de escritorio completo"
+    ],
+    "correcta": 0,
+    "explicacion": "Los IoT suelen tener recursos limitados, actualizaciones difíciles y contraseñas de fábrica. No tienen exceso de potencia, sí se conectan a la red y no suelen ejecutar sistemas de escritorio."
+  },
+  {
+    "id": "D3-006",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Una aplicación monolítica se reescribe como microservicios que se comunican por API. ¿Qué implicación de seguridad es correcta?",
+    "opciones": [
+      "Desaparece la necesidad de autenticar las llamadas entre servicios",
+      "Se elimina la superficie de ataque al no haber servidor",
+      "Se convierte automáticamente en una red air-gapped",
+      "Aumenta la superficie de ataque (más APIs que proteger), aunque un fallo puede quedar aislado en un servicio"
+    ],
+    "correcta": 3,
+    "explicacion": "Más servicios y APIs implican más puntos de entrada que asegurar y autenticar, aunque mejoran el aislamiento de fallos. Las llamadas internas deben autenticarse; los microservicios no eliminan servidores ni equivalen a aislamiento físico."
+  },
+  {
+    "id": "D3-007",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Un proveedor de cloud gestiona el sistema operativo, el runtime y el escalado; el cliente solo sube su código y sus datos. ¿Qué modelo de servicio es?",
+    "opciones": [
+      "PaaS (Platform as a Service)",
+      "IaaS (Infrastructure as a Service)",
+      "SaaS (Software as a Service)",
+      "On-premises"
+    ],
+    "correcta": 0,
+    "explicacion": "En PaaS el proveedor gestiona la plataforma (SO, runtime) y el cliente su aplicación y datos. En IaaS el cliente gestiona también el SO; en SaaS solo usa la aplicación; on-premises lo gestiona todo el cliente."
+  },
+  {
+    "id": "D3-008",
+    "dominio": 3,
+    "objetivo": "3.1",
+    "enunciado": "Un sistema que controla los frenos de un tren debe responder en milisegundos garantizados. ¿Qué tipo de sistema es y qué reto de seguridad presenta?",
+    "opciones": [
+      "Un SaaS, cuya seguridad gestiona totalmente el proveedor",
+      "Un contenedor, que comparte kernel con otros servicios web",
+      "Un RTOS (sistema operativo en tiempo real), difícil de parchear sin afectar a la temporización",
+      "Un honeypot, diseñado para atraer atacantes"
+    ],
+    "correcta": 2,
+    "explicacion": "Los RTOS garantizan tiempos de respuesta y suelen ser embebidos y difíciles de actualizar. No es un SaaS, un contenedor web ni un señuelo."
+  },
+  {
+    "id": "D3-009",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Un firewall perimetral de un banco falla. La política exige que, en caso de fallo, no pase ningún tráfico aunque se interrumpa el servicio. ¿Qué modo de fallo debe configurarse?",
+    "opciones": [
+      "Fail-open",
+      "Activo-activo",
+      "Fail-closed",
+      "Modo pasivo (tap)"
+    ],
+    "correcta": 2,
+    "explicacion": "Fail-closed bloquea todo el tráfico ante un fallo, priorizando la seguridad. Fail-open deja pasar el tráfico priorizando la disponibilidad; activo-activo es una configuración de balanceo; tap es una conexión pasiva de monitorización."
+  },
+  {
+    "id": "D3-010",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Los administradores deben acceder a los servidores de la red de producción. Para no exponerlos directamente, todo el acceso pasa por un único servidor endurecido y monitorizado. ¿Qué es ese servidor?",
+    "opciones": [
+      "Proxy directo (forward proxy)",
+      "Balanceador de carga",
+      "Honeypot",
+      "Servidor de salto (jump server)"
+    ],
+    "correcta": 3,
+    "explicacion": "Un jump server (bastión) es el punto de entrada controlado para administrar una zona segura. Un forward proxy media la navegación de los clientes; un balanceador reparte tráfico; un honeypot es un señuelo."
+  },
+  {
+    "id": "D3-011",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Una tienda online sufre intentos de inyección SQL y XSS contra su web pública. ¿Qué dispositivo protege mejor la aplicación?",
+    "opciones": [
+      "Firewall de capa 4 que filtra por IP y puerto",
+      "Firewall de aplicaciones web (WAF)",
+      "Switch con VLANs",
+      "SAI (UPS)"
+    ],
+    "correcta": 1,
+    "explicacion": "El WAF inspecciona tráfico HTTP en capa 7 y bloquea patrones como SQLi o XSS. Un firewall de capa 4 no ve el contenido; las VLAN segmentan la red; un UPS proporciona energía."
+  },
+  {
+    "id": "D3-012",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Un equipo quiere un sistema que analice el tráfico y bloquee automáticamente ataques conocidos en tiempo real. ¿Cómo debe desplegarse?",
+    "opciones": [
+      "Un IPS en línea (inline)",
+      "Un IDS conectado a un puerto espejo (SPAN)",
+      "Un honeypot en la DMZ",
+      "Un servidor de salto"
+    ],
+    "correcta": 0,
+    "explicacion": "Para bloquear, el IPS debe estar en línea, en el camino del tráfico. Un IDS en un puerto espejo solo detecta; un honeypot atrae atacantes y un jump server sirve para administrar."
+  },
+  {
+    "id": "D3-013",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Una empresa publica su servidor web y su servidor de correo en internet, pero quiere separarlos de la red interna. ¿Dónde debe situarlos?",
+    "opciones": [
+      "En la VLAN de recursos humanos",
+      "En la red interna junto a los controladores de dominio",
+      "En una subred filtrada (screened subnet / DMZ)",
+      "En una red air-gapped"
+    ],
+    "correcta": 2,
+    "explicacion": "La DMZ alberga servicios públicos separados de la red interna mediante firewalls. Situarlos en redes internas expone sistemas críticos y una red air-gapped no sería accesible desde internet."
+  },
+  {
+    "id": "D3-014",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Antes de que un portátil acceda a la red cableada de la oficina, el switch exige que se autentique con un certificado contra un servidor RADIUS. ¿Qué tecnología se usa?",
+    "opciones": [
+      "SD-WAN",
+      "NetFlow",
+      "802.1X con EAP",
+      "SNMPv1"
+    ],
+    "correcta": 2,
+    "explicacion": "802.1X es el control de acceso por puerto que usa EAP y un servidor RADIUS. SD-WAN gestiona enlaces WAN; NetFlow registra flujos; SNMPv1 gestiona dispositivos y es inseguro."
+  },
+  {
+    "id": "D3-015",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Una empresa con muchos teletrabajadores y sucursales quiere ofrecer conectividad y seguridad (SWG, CASB, ZTNA, firewall) como un servicio unificado desde la nube. ¿Qué concepto describe?",
+    "opciones": [
+      "SASE (Secure Access Service Edge)",
+      "UTM local en cada sucursal",
+      "Red air-gapped",
+      "VLAN de invitados"
+    ],
+    "correcta": 0,
+    "explicacion": "SASE combina funciones de red (SD-WAN) y de seguridad entregadas desde la nube. Un UTM local no es un servicio en la nube; una red air-gapped no tiene conectividad; una VLAN de invitados solo segmenta."
+  },
+  {
+    "id": "D3-016",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Una pyme quiere un único dispositivo que combine firewall, antivirus de pasarela, filtrado de contenido y VPN para simplificar la gestión. ¿Qué dispositivo es?",
+    "opciones": [
+      "UTM (Unified Threat Management)",
+      "WAF",
+      "Jump server",
+      "Sensor pasivo"
+    ],
+    "correcta": 0,
+    "explicacion": "Un UTM integra varias funciones de seguridad en un solo equipo. Un WAF solo protege aplicaciones web; un jump server sirve para administrar; un sensor pasivo solo recoge datos."
+  },
+  {
+    "id": "D3-017",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Un servidor web interno debe quedar oculto a internet; las peticiones externas llegan a un intermediario que las reenvía, termina TLS y filtra el tráfico. ¿Qué es ese intermediario?",
+    "opciones": [
+      "Proxy directo (forward proxy)",
+      "Servidor RADIUS",
+      "Concentrador de VPN de cliente",
+      "Proxy inverso (reverse proxy)"
+    ],
+    "correcta": 3,
+    "explicacion": "Un proxy inverso recibe peticiones en nombre de los servidores internos. Un proxy directo actúa en nombre de los clientes internos que salen a internet; RADIUS autentica; un concentrador VPN da acceso remoto a usuarios."
+  },
+  {
+    "id": "D3-018",
+    "dominio": 3,
+    "objetivo": "3.2",
+    "enunciado": "Se instala un IDS conectado a un TAP de red para no introducir latencia ni ser un punto de fallo. ¿Qué limitación tiene este despliegue?",
+    "opciones": [
+      "Introduce un punto único de fallo en la red",
+      "Descifra automáticamente todo el tráfico TLS",
+      "No puede bloquear el tráfico malicioso, solo detectarlo y alertar",
+      "Reemplaza al firewall perimetral"
+    ],
+    "correcta": 2,
+    "explicacion": "Un dispositivo pasivo recibe una copia del tráfico, así que solo detecta. Al no estar en línea no es un punto de fallo, no descifra TLS por sí mismo y no sustituye al firewall."
+  },
+  {
+    "id": "D3-019",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Una aseguradora debe garantizar que los datos de clientes europeos se almacenen únicamente en centros de datos de la UE para cumplir la ley. ¿Qué concepto aplica?",
+    "opciones": [
+      "Soberanía de datos (data sovereignty)",
+      "Tokenización",
+      "Ofuscación",
+      "Disponibilidad"
+    ],
+    "correcta": 0,
+    "explicacion": "Los datos están sujetos a las leyes del país donde se almacenan: soberanía de datos. La tokenización y la ofuscación protegen el contenido, no la ubicación; la disponibilidad es acceso cuando se necesita."
+  },
+  {
+    "id": "D3-020",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Un centro de atención al cliente necesita ver solo los cuatro últimos dígitos de la tarjeta de los clientes («**** **** **** 4821»). ¿Qué técnica se aplica?",
+    "opciones": [
+      "Hashing",
+      "Cifrado asimétrico",
+      "Enmascaramiento de datos (data masking)",
+      "Esteganografía"
+    ],
+    "correcta": 2,
+    "explicacion": "Mostrar solo parte del dato y ocultar el resto es enmascaramiento. El hashing genera un resumen irreconocible; el cifrado asimétrico protege el dato completo; la esteganografía oculta datos dentro de otros archivos."
+  },
+  {
+    "id": "D3-021",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Un servidor de base de datos procesa información cifrada y la empresa quiere protegerla mientras está cargada en la memoria del procesador. ¿Qué estado de los datos se está protegiendo?",
+    "opciones": [
+      "Datos en reposo (at rest)",
+      "Datos en tránsito (in transit)",
+      "Datos archivados",
+      "Datos en uso (in use)"
+    ],
+    "correcta": 3,
+    "explicacion": "Los datos en memoria o siendo procesados están en uso; se protegen con enclaves seguros o cifrado homomórfico. En reposo están almacenados; en tránsito viajan por la red; archivados es una forma de reposo."
+  },
+  {
+    "id": "D3-022",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Una empresa quiere proteger los datos que viajan entre sus sucursales por internet. ¿Qué control es el más adecuado?",
+    "opciones": [
+      "Cifrado de disco completo en los servidores",
+      "Un túnel VPN IPsec entre sedes",
+      "Enmascaramiento de datos en la base de datos",
+      "Restricción de permisos NTFS"
+    ],
+    "correcta": 1,
+    "explicacion": "Los datos en tránsito se protegen con cifrado del canal (IPsec, TLS). El cifrado de disco protege datos en reposo; el enmascaramiento y los permisos no cifran la comunicación."
+  },
+  {
+    "id": "D3-023",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Los planos de un nuevo producto que aún no se ha anunciado y que dan ventaja competitiva a la empresa son un ejemplo de qué tipo de dato?",
+    "opciones": [
+      "Dato público",
+      "Dato regulado por normativa de salud",
+      "Secreto comercial / propiedad intelectual",
+      "Dato de registro de auditoría"
+    ],
+    "correcta": 2,
+    "explicacion": "La información confidencial que da ventaja competitiva es secreto comercial o propiedad intelectual. No es pública, no es un dato sanitario regulado ni un log de auditoría."
+  },
+  {
+    "id": "D3-024",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Un banco bloquea cualquier intento de acceso a su portal de administración desde direcciones IP de fuera del país. ¿Qué método de protección de datos usa?",
+    "opciones": [
+      "Tokenización",
+      "Restricciones geográficas (geographic restrictions)",
+      "Hashing",
+      "Esteganografía"
+    ],
+    "correcta": 1,
+    "explicacion": "Limitar el acceso según la ubicación es una restricción geográfica (geolocalización). La tokenización sustituye datos; el hashing comprueba integridad; la esteganografía oculta información."
+  },
+  {
+    "id": "D3-025",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Una organización etiqueta sus documentos como «Pública», «Interna», «Confidencial» y «Restringida» para aplicar controles distintos a cada nivel. ¿Qué está haciendo?",
+    "opciones": [
+      "Soberanía de datos",
+      "Ofuscación",
+      "Segmentación de red",
+      "Clasificación de datos (data classification)"
+    ],
+    "correcta": 3,
+    "explicacion": "Asignar niveles de sensibilidad para aplicar controles proporcionados es clasificación de datos. La soberanía se refiere a leyes por ubicación; la ofuscación oculta datos; la segmentación separa redes."
+  },
+  {
+    "id": "D3-026",
+    "dominio": 3,
+    "objetivo": "3.3",
+    "enunciado": "Para verificar que una copia de un archivo de evidencias es idéntica al original, un analista compara un valor calculado sobre ambos. ¿Qué método usa?",
+    "opciones": [
+      "Enmascaramiento",
+      "Hashing (por ejemplo SHA-256)",
+      "Tokenización",
+      "Restricciones geográficas"
+    ],
+    "correcta": 1,
+    "explicacion": "Calcular y comparar hashes verifica que los datos son idénticos (integridad). El enmascaramiento y la tokenización ocultan o sustituyen datos; las restricciones geográficas controlan el acceso."
+  },
+  {
+    "id": "D3-027",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Un servidor de archivos usa 4 discos en RAID 5. Falla un disco. ¿Qué ocurre?",
+    "opciones": [
+      "Se pierden todos los datos inmediatamente",
+      "El RAID 5 no tolera ningún fallo de disco",
+      "Solo se conservan los datos del disco que falló",
+      "Los datos siguen disponibles gracias a la paridad distribuida y el disco puede reconstruirse"
+    ],
+    "correcta": 3,
+    "explicacion": "RAID 5 tolera el fallo de un disco gracias a la paridad distribuida; si fallara un segundo antes de reconstruir, se perderían los datos. No es RAID 0, que no tiene redundancia."
+  },
+  {
+    "id": "D3-028",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Un editor de vídeo quiere el máximo rendimiento de lectura/escritura con dos discos y acepta perder los datos si falla uno, porque tiene copias en otro lugar. ¿Qué nivel de RAID elige?",
+    "opciones": [
+      "RAID 1",
+      "RAID 5",
+      "RAID 6",
+      "RAID 0"
+    ],
+    "correcta": 3,
+    "explicacion": "RAID 0 (striping) ofrece rendimiento sin redundancia. RAID 1 es espejo (redundante); RAID 5 y 6 usan paridad y necesitan al menos 3 y 4 discos respectivamente."
+  },
+  {
+    "id": "D3-029",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Una empresa hace una copia completa el domingo y copias diferenciales de lunes a sábado. El viernes por la tarde falla el servidor. ¿Qué copias necesita para restaurar?",
+    "opciones": [
+      "La copia completa y todas las diferenciales de lunes a jueves",
+      "Solo la última diferencial",
+      "Solo la copia completa",
+      "La copia completa del domingo y la diferencial del jueves (la última)"
+    ],
+    "correcta": 3,
+    "explicacion": "Cada diferencial contiene todos los cambios desde la última completa, así que basta la completa más la última diferencial. Restaurar todas sería el procedimiento de las incrementales; la diferencial sola no tiene la base; la completa sola pierde los cambios de la semana."
+  },
+  {
+    "id": "D3-030",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Un hospital necesita que, si su centro de datos principal se destruye, los sistemas críticos funcionen en otro lugar en menos de 1 hora, con datos casi en tiempo real. ¿Qué tipo de sitio necesita?",
+    "opciones": [
+      "Sitio frío (cold site)",
+      "Sitio templado (warm site)",
+      "Sitio caliente (hot site)",
+      "Copia en cinta almacenada en la sede principal"
+    ],
+    "correcta": 2,
+    "explicacion": "Un hot site está totalmente equipado y sincronizado, y permite recuperarse en minutos u horas. Un cold site solo tiene espacio y energía (días/semanas); un warm site necesita horas o días; una cinta en la misma sede se destruiría con ella."
+  },
+  {
+    "id": "D3-031",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Durante un apagón, los servidores deben seguir funcionando sin interrupción durante los 30 segundos que tarda en arrancar el generador. ¿Qué elemento lo garantiza?",
+    "opciones": [
+      "Una PDU sin batería",
+      "Un SAI (UPS)",
+      "Un segundo balanceador de carga",
+      "Un sitio frío"
+    ],
+    "correcta": 1,
+    "explicacion": "El UPS proporciona energía inmediata y de corta duración hasta que arranca el generador. Una PDU solo distribuye energía; un balanceador no aporta energía; un sitio frío no evita la interrupción."
+  },
+  {
+    "id": "D3-032",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "El equipo de continuidad reúne a los responsables en una sala para recorrer verbalmente cómo responderían a una inundación, sin tocar ningún sistema. ¿Qué tipo de prueba es?",
+    "opciones": [
+      "Prueba de conmutación (failover)",
+      "Ejercicio de mesa (tabletop exercise)",
+      "Procesamiento paralelo (parallel processing)",
+      "Prueba de penetración"
+    ],
+    "correcta": 1,
+    "explicacion": "Discutir el escenario sin ejecutar acciones reales es un tabletop. Failover cambia realmente al sistema secundario; el procesamiento paralelo ejecuta ambos sistemas a la vez; un pentest evalúa vulnerabilidades."
+  },
+  {
+    "id": "D3-033",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "¿Qué estrategia de copias ofrece la copia diaria más rápida, aunque la restauración sea más lenta porque requiere la última completa y todas las copias posteriores?",
+    "opciones": [
+      "Incremental",
+      "Diferencial",
+      "Completa diaria",
+      "Snapshot único mensual"
+    ],
+    "correcta": 0,
+    "explicacion": "La incremental solo copia cambios desde la última copia de cualquier tipo: rápida de hacer, lenta de restaurar. La diferencial crece cada día; la completa diaria es la más lenta de hacer; un snapshot mensual no cubre los cambios diarios."
+  },
+  {
+    "id": "D3-034",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Una empresa distribuye sus cargas entre dos proveedores de nube distintos para no depender de uno solo si sufre una caída global. ¿Qué concepto aplica?",
+    "opciones": [
+      "Multinube (multi-cloud) / diversidad de plataformas",
+      "Air gap",
+      "Tokenización",
+      "Fail-open"
+    ],
+    "correcta": 0,
+    "explicacion": "Usar varios proveedores evita un punto único de fallo y la dependencia de un proveedor. Air gap es aislamiento físico; la tokenización protege datos; fail-open es un modo de fallo."
+  },
+  {
+    "id": "D3-035",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Un servidor de base de datos necesita tolerar el fallo simultáneo de dos discos. ¿Qué RAID es el adecuado con el menor coste en discos?",
+    "opciones": [
+      "RAID 5",
+      "RAID 0",
+      "RAID 6",
+      "RAID 1 con dos discos"
+    ],
+    "correcta": 2,
+    "explicacion": "RAID 6 usa doble paridad y tolera dos fallos con un mínimo de 4 discos. RAID 5 solo tolera uno, RAID 0 ninguno y un RAID 1 de dos discos solo tolera uno."
+  },
+  {
+    "id": "D3-036",
+    "dominio": 3,
+    "objetivo": "3.4",
+    "enunciado": "Dos servidores de aplicaciones atienden tráfico simultáneamente y, si uno cae, el otro asume toda la carga. ¿Qué configuración de alta disponibilidad es?",
+    "opciones": [
+      "Balanceo de carga activo-activo",
+      "Sitio frío",
+      "Copia de seguridad diferencial",
+      "Fail-closed"
+    ],
+    "correcta": 0,
+    "explicacion": "En activo-activo ambos nodos atienden tráfico y se cubren mutuamente. Un sitio frío requiere días; una copia diferencial no da disponibilidad inmediata; fail-closed es un modo de fallo de seguridad."
   }
 ]
