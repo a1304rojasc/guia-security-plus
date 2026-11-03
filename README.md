@@ -30,6 +30,7 @@ Cada archivo de dominio sigue los objetivos oficiales (N.1, N.2…), con tablas 
 
 ## Cómo abrir el quiz
 
+- **En línea:** https://a1304rojasc.github.io/guia-security-plus/quiz/ (publicado con GitHub Pages).
 - **Sin instalar nada:** descarga el repositorio (*Code → Download ZIP*) y abre `quiz/index.html` con doble clic. Funciona sin conexión y en el móvil.
 - **Funciones:** elegir dominios y número de preguntas; preguntas y opciones mezcladas en cada intento; explicación tras cada respuesta; puntuación por dominio; modo examen con temporizador y explicaciones al final; repaso de falladas; tema claro/oscuro.
 - **Teclado:** `1`–`4` o `A`–`D` para responder, flechas para moverse entre opciones, `Intro` para continuar.
