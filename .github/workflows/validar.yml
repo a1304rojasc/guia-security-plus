@@ -1,0 +1,19 @@
+name: Validar banco de preguntas
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - run: python herramientas/validar.py
+      - run: pytest -q
+      - name: Comprobar que el quiz está actualizado
+        run: |
+          python herramientas/construir_quiz.py
+          git diff --exit-code quiz/index.html
